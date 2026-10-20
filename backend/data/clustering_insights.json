@@ -1,0 +1,640 @@
+{
+  "method": "K-Means",
+  "random_state": 42,
+  "k": 3,
+  "total_responden": 400,
+  "cluster_to_risk": {
+    "1": "Risiko Tinggi",
+    "2": "Risiko Rendah",
+    "3": "Risiko Sedang"
+  },
+  "profiles": {
+    "tinggi": {
+      "label": "Risiko Tinggi",
+      "n": 75,
+      "percentage_of_total": 18.75,
+      "top_variables": [
+        {
+          "id": "x10",
+          "code": "X10",
+          "label": "Status Gizi Anak",
+          "z_mean": 0.800493,
+          "raw_mean": 4.5622,
+          "percentage": 91.24,
+          "top_indicator": {
+            "id": "x10.1",
+            "code": "X10.1",
+            "label": "Jenis Makanan",
+            "z_mean": 0.844632,
+            "raw_mean": 4.6222,
+            "percentage": 92.44,
+            "top_item": {
+              "id": "x10.1.2",
+              "code": "X10.1.2",
+              "question": "Apakah menu makanan anak setiap hari memiliki kandungan gizi yang baik?",
+              "z_mean": 0.85647,
+              "raw_mean": 4.6133,
+              "percentage": 92.27
+            }
+          }
+        },
+        {
+          "id": "x3",
+          "code": "X3",
+          "label": "Pola Asuh",
+          "z_mean": 0.770453,
+          "raw_mean": 4.5156,
+          "percentage": 90.31,
+          "top_indicator": {
+            "id": "x3.2",
+            "code": "X3.2",
+            "label": "Sistem Otoriter",
+            "z_mean": 0.792476,
+            "raw_mean": 4.5467,
+            "percentage": 90.93,
+            "top_item": {
+              "id": "x3.2.3",
+              "code": "X3.2.3",
+              "question": "Apakah orang tua tetap bersikeras agar anaknya menghabiskan makanan berserat?",
+              "z_mean": 0.811526,
+              "raw_mean": 4.5867,
+              "percentage": 91.73
+            }
+          }
+        },
+        {
+          "id": "x2",
+          "code": "X2",
+          "label": "Tingkat Ekonomi",
+          "z_mean": 0.752017,
+          "raw_mean": 4.5147,
+          "percentage": 90.29,
+          "top_indicator": {
+            "id": "x2.1",
+            "code": "X2.1",
+            "label": "Pendapatan Keluarga",
+            "z_mean": 0.770338,
+            "raw_mean": 4.54,
+            "percentage": 90.8,
+            "top_item": {
+              "id": "x2.1.2",
+              "code": "X2.1.2",
+              "question": "Apakah penghasilan keluarga mencukupi kebutuhan sehari-hari seluruh anggota keluarga?",
+              "z_mean": 0.836407,
+              "raw_mean": 4.5867,
+              "percentage": 91.73
+            }
+          }
+        }
+      ],
+      "all_variables": [
+        {
+          "id": "x10",
+          "code": "X10",
+          "label": "Status Gizi Anak",
+          "z_mean": 0.800493,
+          "raw_mean": 4.5622,
+          "percentage": 91.24,
+          "top_indicator": {
+            "id": "x10.1",
+            "code": "X10.1",
+            "label": "Jenis Makanan",
+            "z_mean": 0.844632,
+            "raw_mean": 4.6222,
+            "percentage": 92.44,
+            "top_item": {
+              "id": "x10.1.2",
+              "code": "X10.1.2",
+              "question": "Apakah menu makanan anak setiap hari memiliki kandungan gizi yang baik?",
+              "z_mean": 0.85647,
+              "raw_mean": 4.6133,
+              "percentage": 92.27
+            }
+          }
+        },
+        {
+          "id": "x3",
+          "code": "X3",
+          "label": "Pola Asuh",
+          "z_mean": 0.770453,
+          "raw_mean": 4.5156,
+          "percentage": 90.31,
+          "top_indicator": {
+            "id": "x3.2",
+            "code": "X3.2",
+            "label": "Sistem Otoriter",
+            "z_mean": 0.792476,
+            "raw_mean": 4.5467,
+            "percentage": 90.93,
+            "top_item": {
+              "id": "x3.2.3",
+              "code": "X3.2.3",
+              "question": "Apakah orang tua tetap bersikeras agar anaknya menghabiskan makanan berserat?",
+              "z_mean": 0.811526,
+              "raw_mean": 4.5867,
+              "percentage": 91.73
+            }
+          }
+        },
+        {
+          "id": "x2",
+          "code": "X2",
+          "label": "Tingkat Ekonomi",
+          "z_mean": 0.752017,
+          "raw_mean": 4.5147,
+          "percentage": 90.29,
+          "top_indicator": {
+            "id": "x2.1",
+            "code": "X2.1",
+            "label": "Pendapatan Keluarga",
+            "z_mean": 0.770338,
+            "raw_mean": 4.54,
+            "percentage": 90.8,
+            "top_item": {
+              "id": "x2.1.2",
+              "code": "X2.1.2",
+              "question": "Apakah penghasilan keluarga mencukupi kebutuhan sehari-hari seluruh anggota keluarga?",
+              "z_mean": 0.836407,
+              "raw_mean": 4.5867,
+              "percentage": 91.73
+            }
+          }
+        },
+        {
+          "id": "x6",
+          "code": "X6",
+          "label": "Status Gizi Orang Tua",
+          "z_mean": 0.745004,
+          "raw_mean": 4.4933,
+          "percentage": 89.87
+        },
+        {
+          "id": "x5",
+          "code": "X5",
+          "label": "Pola Makan Anak",
+          "z_mean": 0.741064,
+          "raw_mean": 4.4904,
+          "percentage": 89.81
+        },
+        {
+          "id": "x8",
+          "code": "X8",
+          "label": "Peran Pemerintah Daerah",
+          "z_mean": 0.737295,
+          "raw_mean": 4.4911,
+          "percentage": 89.82
+        },
+        {
+          "id": "x9",
+          "code": "X9",
+          "label": "Dukungan Keluarga",
+          "z_mean": 0.724914,
+          "raw_mean": 4.4944,
+          "percentage": 89.89
+        },
+        {
+          "id": "x7",
+          "code": "X7",
+          "label": "Lingkungan",
+          "z_mean": 0.722885,
+          "raw_mean": 4.4978,
+          "percentage": 89.96
+        },
+        {
+          "id": "x1",
+          "code": "X1",
+          "label": "Pengetahuan Ibu",
+          "z_mean": 0.709296,
+          "raw_mean": 4.49,
+          "percentage": 89.8
+        },
+        {
+          "id": "x4",
+          "code": "X4",
+          "label": "Layanan Kesehatan",
+          "z_mean": 0.704077,
+          "raw_mean": 4.4767,
+          "percentage": 89.53
+        }
+      ]
+    },
+    "sedang": {
+      "label": "Risiko Sedang",
+      "n": 181,
+      "percentage_of_total": 45.25,
+      "top_variables": [
+        {
+          "id": "x6",
+          "code": "X6",
+          "label": "Status Gizi Orang Tua",
+          "z_mean": 0.158073,
+          "raw_mean": 3.9429,
+          "percentage": 78.86,
+          "top_indicator": {
+            "id": "x6.1",
+            "code": "X6.1",
+            "label": "Jenis Makanan",
+            "z_mean": 0.159478,
+            "raw_mean": 3.9337,
+            "percentage": 78.67,
+            "top_item": {
+              "id": "x6.1.3",
+              "code": "X6.1.3",
+              "question": "Apakah orang tua rutin mengonsumsi makanan yang mengandung vitamin?",
+              "z_mean": 0.162027,
+              "raw_mean": 3.9613,
+              "percentage": 79.23
+            }
+          }
+        },
+        {
+          "id": "x3",
+          "code": "X3",
+          "label": "Pola Asuh",
+          "z_mean": 0.148074,
+          "raw_mean": 3.9346,
+          "percentage": 78.69,
+          "top_indicator": {
+            "id": "x3.2",
+            "code": "X3.2",
+            "label": "Sistem Otoriter",
+            "z_mean": 0.173966,
+            "raw_mean": 3.9687,
+            "percentage": 79.37,
+            "top_item": {
+              "id": "x3.2.2",
+              "code": "X3.2.2",
+              "question": "Apakah orang tua mengingatkan dengan tegas saat anaknya makan sambil bermain?",
+              "z_mean": 0.261091,
+              "raw_mean": 4.011,
+              "percentage": 80.22
+            }
+          }
+        },
+        {
+          "id": "x8",
+          "code": "X8",
+          "label": "Peran Pemerintah Daerah",
+          "z_mean": 0.140708,
+          "raw_mean": 3.919,
+          "percentage": 78.38,
+          "top_indicator": {
+            "id": "x8.2",
+            "code": "X8.2",
+            "label": "Pencegahan",
+            "z_mean": 0.175094,
+            "raw_mean": 3.9429,
+            "percentage": 78.86,
+            "top_item": {
+              "id": "x8.2.2",
+              "code": "X8.2.2",
+              "question": "Apakah pemerintah aktif membangun sanitasi air yang berkualitas?",
+              "z_mean": 0.197065,
+              "raw_mean": 4.0,
+              "percentage": 80.0
+            }
+          }
+        }
+      ],
+      "all_variables": [
+        {
+          "id": "x6",
+          "code": "X6",
+          "label": "Status Gizi Orang Tua",
+          "z_mean": 0.158073,
+          "raw_mean": 3.9429,
+          "percentage": 78.86,
+          "top_indicator": {
+            "id": "x6.1",
+            "code": "X6.1",
+            "label": "Jenis Makanan",
+            "z_mean": 0.159478,
+            "raw_mean": 3.9337,
+            "percentage": 78.67,
+            "top_item": {
+              "id": "x6.1.3",
+              "code": "X6.1.3",
+              "question": "Apakah orang tua rutin mengonsumsi makanan yang mengandung vitamin?",
+              "z_mean": 0.162027,
+              "raw_mean": 3.9613,
+              "percentage": 79.23
+            }
+          }
+        },
+        {
+          "id": "x3",
+          "code": "X3",
+          "label": "Pola Asuh",
+          "z_mean": 0.148074,
+          "raw_mean": 3.9346,
+          "percentage": 78.69,
+          "top_indicator": {
+            "id": "x3.2",
+            "code": "X3.2",
+            "label": "Sistem Otoriter",
+            "z_mean": 0.173966,
+            "raw_mean": 3.9687,
+            "percentage": 79.37,
+            "top_item": {
+              "id": "x3.2.2",
+              "code": "X3.2.2",
+              "question": "Apakah orang tua mengingatkan dengan tegas saat anaknya makan sambil bermain?",
+              "z_mean": 0.261091,
+              "raw_mean": 4.011,
+              "percentage": 80.22
+            }
+          }
+        },
+        {
+          "id": "x8",
+          "code": "X8",
+          "label": "Peran Pemerintah Daerah",
+          "z_mean": 0.140708,
+          "raw_mean": 3.919,
+          "percentage": 78.38,
+          "top_indicator": {
+            "id": "x8.2",
+            "code": "X8.2",
+            "label": "Pencegahan",
+            "z_mean": 0.175094,
+            "raw_mean": 3.9429,
+            "percentage": 78.86,
+            "top_item": {
+              "id": "x8.2.2",
+              "code": "X8.2.2",
+              "question": "Apakah pemerintah aktif membangun sanitasi air yang berkualitas?",
+              "z_mean": 0.197065,
+              "raw_mean": 4.0,
+              "percentage": 80.0
+            }
+          }
+        },
+        {
+          "id": "x9",
+          "code": "X9",
+          "label": "Dukungan Keluarga",
+          "z_mean": 0.128614,
+          "raw_mean": 3.9424,
+          "percentage": 78.85
+        },
+        {
+          "id": "x7",
+          "code": "X7",
+          "label": "Lingkungan",
+          "z_mean": 0.123421,
+          "raw_mean": 3.93,
+          "percentage": 78.6
+        },
+        {
+          "id": "x2",
+          "code": "X2",
+          "label": "Tingkat Ekonomi",
+          "z_mean": 0.120493,
+          "raw_mean": 3.9238,
+          "percentage": 78.48
+        },
+        {
+          "id": "x5",
+          "code": "X5",
+          "label": "Pola Makan Anak",
+          "z_mean": 0.11822,
+          "raw_mean": 3.9153,
+          "percentage": 78.31
+        },
+        {
+          "id": "x4",
+          "code": "X4",
+          "label": "Layanan Kesehatan",
+          "z_mean": 0.116372,
+          "raw_mean": 3.9332,
+          "percentage": 78.66
+        },
+        {
+          "id": "x10",
+          "code": "X10",
+          "label": "Status Gizi Anak",
+          "z_mean": 0.097335,
+          "raw_mean": 3.907,
+          "percentage": 78.14
+        },
+        {
+          "id": "x1",
+          "code": "X1",
+          "label": "Pengetahuan Ibu",
+          "z_mean": 0.088531,
+          "raw_mean": 3.924,
+          "percentage": 78.48
+        }
+      ]
+    },
+    "rendah": {
+      "label": "Risiko Rendah",
+      "n": 144,
+      "percentage_of_total": 36.0,
+      "top_variables": [
+        {
+          "id": "x1",
+          "code": "X1",
+          "label": "Pengetahuan Ibu",
+          "z_mean": -0.480703,
+          "raw_mean": 3.3108,
+          "percentage": 66.22,
+          "top_indicator": {
+            "id": "x1.2",
+            "code": "X1.2",
+            "label": "Pengetahuan Gizi",
+            "z_mean": -0.479661,
+            "raw_mean": 3.3438,
+            "percentage": 66.88,
+            "top_item": {
+              "id": "x1.2.2",
+              "code": "X1.2.2",
+              "question": "Apakah stunting diakibatkan oleh kekurangan gizi dalam waktu lama, yaitu terjadi sejak janin dalam kandungan sampai anak umur 3 tahun?",
+              "z_mean": -0.464533,
+              "raw_mean": 3.3056,
+              "percentage": 66.11
+            }
+          }
+        },
+        {
+          "id": "x4",
+          "code": "X4",
+          "label": "Layanan Kesehatan",
+          "z_mean": -0.51298,
+          "raw_mean": 3.2755,
+          "percentage": 65.51,
+          "top_indicator": {
+            "id": "x4.2",
+            "code": "X4.2",
+            "label": "Reliabilitas",
+            "z_mean": -0.471781,
+            "raw_mean": 3.3056,
+            "percentage": 66.11,
+            "top_item": {
+              "id": "x4.2.1",
+              "code": "X4.2.1",
+              "question": "Apakah layanan kesehatan (puskesmas pembantu) menjalankan prosedur dengan baik?",
+              "z_mean": -0.447435,
+              "raw_mean": 3.375,
+              "percentage": 67.5
+            }
+          }
+        },
+        {
+          "id": "x7",
+          "code": "X7",
+          "label": "Lingkungan",
+          "z_mean": -0.531636,
+          "raw_mean": 3.2176,
+          "percentage": 64.35,
+          "top_indicator": {
+            "id": "x7.3",
+            "code": "X7.3",
+            "label": "Kebiasaan Mencuci Tangan",
+            "z_mean": -0.507574,
+            "raw_mean": 3.2546,
+            "percentage": 65.09,
+            "top_item": {
+              "id": "x7.3.2",
+              "code": "X7.3.2",
+              "question": "Apakah orang tua hampir selalu mencuci tangan menggunakan sabun sebelum makan?",
+              "z_mean": -0.468761,
+              "raw_mean": 3.3472,
+              "percentage": 66.94
+            }
+          }
+        }
+      ],
+      "all_variables": [
+        {
+          "id": "x1",
+          "code": "X1",
+          "label": "Pengetahuan Ibu",
+          "z_mean": -0.480703,
+          "raw_mean": 3.3108,
+          "percentage": 66.22,
+          "top_indicator": {
+            "id": "x1.2",
+            "code": "X1.2",
+            "label": "Pengetahuan Gizi",
+            "z_mean": -0.479661,
+            "raw_mean": 3.3438,
+            "percentage": 66.88,
+            "top_item": {
+              "id": "x1.2.2",
+              "code": "X1.2.2",
+              "question": "Apakah stunting diakibatkan oleh kekurangan gizi dalam waktu lama, yaitu terjadi sejak janin dalam kandungan sampai anak umur 3 tahun?",
+              "z_mean": -0.464533,
+              "raw_mean": 3.3056,
+              "percentage": 66.11
+            }
+          }
+        },
+        {
+          "id": "x4",
+          "code": "X4",
+          "label": "Layanan Kesehatan",
+          "z_mean": -0.51298,
+          "raw_mean": 3.2755,
+          "percentage": 65.51,
+          "top_indicator": {
+            "id": "x4.2",
+            "code": "X4.2",
+            "label": "Reliabilitas",
+            "z_mean": -0.471781,
+            "raw_mean": 3.3056,
+            "percentage": 66.11,
+            "top_item": {
+              "id": "x4.2.1",
+              "code": "X4.2.1",
+              "question": "Apakah layanan kesehatan (puskesmas pembantu) menjalankan prosedur dengan baik?",
+              "z_mean": -0.447435,
+              "raw_mean": 3.375,
+              "percentage": 67.5
+            }
+          }
+        },
+        {
+          "id": "x7",
+          "code": "X7",
+          "label": "Lingkungan",
+          "z_mean": -0.531636,
+          "raw_mean": 3.2176,
+          "percentage": 64.35,
+          "top_indicator": {
+            "id": "x7.3",
+            "code": "X7.3",
+            "label": "Kebiasaan Mencuci Tangan",
+            "z_mean": -0.507574,
+            "raw_mean": 3.2546,
+            "percentage": 65.09,
+            "top_item": {
+              "id": "x7.3.2",
+              "code": "X7.3.2",
+              "question": "Apakah orang tua hampir selalu mencuci tangan menggunakan sabun sebelum makan?",
+              "z_mean": -0.468761,
+              "raw_mean": 3.3472,
+              "percentage": 66.94
+            }
+          }
+        },
+        {
+          "id": "x5",
+          "code": "X5",
+          "label": "Pola Makan Anak",
+          "z_mean": -0.534566,
+          "raw_mean": 3.2253,
+          "percentage": 64.51
+        },
+        {
+          "id": "x9",
+          "code": "X9",
+          "label": "Dukungan Keluarga",
+          "z_mean": -0.53922,
+          "raw_mean": 3.2321,
+          "percentage": 64.64
+        },
+        {
+          "id": "x10",
+          "code": "X10",
+          "label": "Status Gizi Anak",
+          "z_mean": -0.539268,
+          "raw_mean": 3.2234,
+          "percentage": 64.47
+        },
+        {
+          "id": "x2",
+          "code": "X2",
+          "label": "Tingkat Ekonomi",
+          "z_mean": -0.543128,
+          "raw_mean": 3.2,
+          "percentage": 64.0
+        },
+        {
+          "id": "x8",
+          "code": "X8",
+          "label": "Peran Pemerintah Daerah",
+          "z_mean": -0.56087,
+          "raw_mean": 3.1493,
+          "percentage": 62.99
+        },
+        {
+          "id": "x6",
+          "code": "X6",
+          "label": "Status Gizi Orang Tua",
+          "z_mean": -0.586712,
+          "raw_mean": 3.1528,
+          "percentage": 63.06
+        },
+        {
+          "id": "x3",
+          "code": "X3",
+          "label": "Pola Asuh",
+          "z_mean": -0.587399,
+          "raw_mean": 3.125,
+          "percentage": 62.5
+        }
+      ]
+    }
+  }
+}

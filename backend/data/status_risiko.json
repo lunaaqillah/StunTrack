@@ -1,0 +1,32 @@
+{
+  "statuses": [
+    {
+      "value": "Rendah",
+      "level": "rendah",
+      "min": null,
+      "max": -1.0,
+      "max_inclusive": false,
+      "accent": "#1FA454",
+      "bg": "#E5F7EA"
+    },
+    {
+      "value": "Sedang",
+      "level": "sedang",
+      "min": -1.0,
+      "max": 1.0,
+      "min_inclusive": true,
+      "max_inclusive": true,
+      "accent": "#F08C1C",
+      "bg": "#FFF1DE"
+    },
+    {
+      "value": "Tinggi",
+      "level": "tinggi",
+      "min": 1.0,
+      "max": null,
+      "min_inclusive": false,
+      "accent": "#D62839",
+      "bg": "#FBE6E6"
+    }
+  ]
+}

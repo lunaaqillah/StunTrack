@@ -1,0 +1,34 @@
+{
+  "field": "riwayat_gondok",
+  "values": {
+    "Ya": {
+      "key": "ada",
+      "label": "Memiliki Riwayat Gondok",
+      "title": "Riwayat Gondok Terdeteksi",
+      "description": "Riwayat gondok dalam keluarga dapat mengindikasikan gangguan akibat kekurangan yodium yang berperan penting dalam pertumbuhan janin dan anak.",
+      "color": "#F08C1C",
+      "background": "#FFF1DE"
+    },
+    "Tidak": {
+      "key": "tidak_ada",
+      "label": "Tidak Memiliki Riwayat Gondok",
+      "title": "Tidak Ada Riwayat Gondok",
+      "description": "Tidak ditemukan riwayat gondok dalam keluarga sehingga faktor risiko stunting terkait kekurangan yodium cenderung lebih rendah.",
+      "color": "#1FA454",
+      "background": "#E5F7EA"
+    }
+  },
+  "aliases": {
+    "ya": "Ya",
+    "yes": "Ya",
+    "ada": "Ya",
+    "tidak": "Tidak",
+    "no": "Tidak",
+    "tidak ada": "Tidak",
+    "tidak_ada": "Tidak"
+  },
+  "seed_weights": {
+    "Ya": 0.1,
+    "Tidak": 0.9
+  }
+}

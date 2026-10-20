@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>StunTrack</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- SECTION: Favicons -->
+  <link href="assets/img/LOGO-2.png" rel="icon">
+  <link href="assets/img/LOGO-2.png" rel="apple-touch-icon">
+
+  <!-- /SECTION: Favicons -->
+
+  <!-- SECTION: Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- /SECTION: Fonts -->
+
+  <!-- SECTION: Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- /SECTION: Vendor CSS Files -->
+
+  <!-- SECTION: Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- /SECTION: Main CSS File -->
+
+</head>
+
+<body class="index-page page-kuesioner">
+
+  <!-- SECTION: Submit Overlay -->
+  <div id="submitOverlay"></div>
+
+  <!-- /SECTION: Submit Overlay -->
+
+  <!-- SECTION: Header -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div
+      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
+
+        <h1 class="sitename">
+          <img src="assets/img/LOGO.png" alt="StunTrack">
+        </h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/#hero" class="active">Home</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#history">History</a></li>
+          <li><a href="/#features">Features</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/#news">News</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a class="btn-getstarted" href="/kuesioner.html">Cegah Stunting</a>
+    </div>
+  </header>
+  <!-- /SECTION: Header -->
+
+  <main class="main">
+
+    <!-- SECTION: Page Title -->
+    <div class="page-title light-background">
+      <div class="container">
+        <h1 class="u-ff-Mont-HeavyDEMO-var-headi">Formulir Pengisian Data StunTrack</h1>
+        <p class="page-description">
+          Terima kasih telah menggunakan StunTrack, sistem yang membantu memantau pertumbuhan dan faktor risiko stunting
+          pada balita. Mohon lengkapi data dengan jujur dan sesuai dengan keadaan yang sebenarnya agar kami dapat
+          memberikan hasil pemantauan dan rekomendasi pencegahan yang lebih sesuai.
+        </p>
+      </div>
+    </div>
+    <!-- /SECTION: Page Title -->
+
+    <!-- SECTION: Progress Bar -->
+    <div class="container">
+      <div class="progressbar">
+        <div class="progress" id="progress"></div>
+        <div class="progress-step progress-step-active" data-title="Pendahuluan"><i class="bi bi-info-circle-fill"></i>
+        </div>
+        <div class="progress-step" data-title="Identitas Orang Tua"><i class="bi bi-person-fill"></i></div>
+        <div class="progress-step" data-title="Identitas Balita"><i class="bi bi-clipboard-heart-fill"></i></div>
+        <div class="progress-step" data-title="Kuesioner"><i class="bi bi-clipboard-check-fill"></i></div>
+        <div class="progress-step" data-title="Selesai"><i class="bi bi-check-circle-fill"></i></div>
+      </div>
+    </div>
+    <!-- /SECTION: Progress Bar -->
+
+    <!-- SECTION: Pernyataan Pendahuluan -->
+    <section id="pendahuluan" class="pendahuluan section">
+      <div class="container section-title"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="info-box mb-4">
+              <h2 class="u-c-EAA0A3_ff-Mont-HeavyDEMO-var-headi">Pernyataan Kesediaan
+                Mengisi Kuesioner</h2>
+              <hr>
+              <p><strong>Kuesioner</strong> ini merupakan bagian dari sistem <strong>StunTrack</strong> yang digunakan
+                untuk membantu memantau pertumbuhan dan faktor risiko stunting pada balita. Kami menghargai kesediaan
+                Bapak/Ibu untuk meluangkan waktu sekitar <strong>10–15 menit</strong> dalam pengisian kuesioner ini.
+                <strong>Tidak terdapat jawaban yang benar atau salah</strong>, karena setiap isian mencerminkan
+                <strong>keadaan yang dialami</strong> Bapak/Ibu. Oleh karena itu, Bapak/Ibu
+                diharapkan menjawab setiap pertanyaan dengan <strong>jujur dan sesuai dengan keadaan yang
+                  sebenarnya</strong>, karena jawaban yang diberikan berkaitan dengan pemantauan balita.
+                Seluruh data yang diperoleh melalui kuesioner ini akan <strong>dijaga kerahasiaannya</strong> dan
+                digunakan sesuai dengan tujuan sistem StunTrack.
+              </p>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="agreementCheckbox">
+                <label class="form-check-label" for="agreementCheckbox">
+                  <strong>Dengan ini saya menyatakan kesediaan untuk berpartisipasi dalam kuesioner ini.</strong>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /SECTION: Fungsi 1: Pernyataan Pendahuluan -->
+
+    <!-- SECTION: Petunjuk Pengisian -->
+    <section id="petunjuk-pengisian" class="petunjuk-pengisian section">
+      <div class="container section-title"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="info-box mb-4">
+              <h2 class="u-c-EAA0A3_ff-Mont-HeavyDEMO-var-headi">Petunjuk Pengisian</h2>
+              <hr>
+              <p class="u-mt-20px_fw-500_c-var-contrast-color">
+                Untuk setiap pernyataan, pilih satu alternatif jawaban yang paling sesuai dengan kondisi Bapak/Ibu.
+                Adapun pilihan jawabannya sebagai berikut:
+              </p>
+              <table class="likert-table">
+                <thead>
+                  <tr>
+                    <th>Skala</th>
+                    <th>Deskripsi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Sangat Tidak Setuju</td>
+                    <td>Bapak/Ibu berpendapat bahwa apa yang terkandung di dalam pernyataan yang diajukan
+                      <strong>sungguh-sungguh tidak sesuai </strong>dengan apa yang dirasakan
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Tidak Setuju</td>
+                    <td>Bapak/Ibu berpendapat bahwa apa yang terkandung di dalam pernyataan yang diajukan <strong>tidak
+                        sesuai</strong> dengan apa yang dirasakan</td>
+                  </tr>
+                  <tr>
+                    <td>Netral</td>
+                    <td>Bapak/Ibu <strong>tidak mempunyai pendapat</strong> tentang apa yang terkandung di dalam
+                      pernyataan</td>
+                  </tr>
+                  <tr>
+                    <td>Setuju</td>
+                    <td>Bapak/Ibu berpendapat bahwa apa yang terkandung di dalam pernyataan yang diajukan
+                      <strong>sesuai</strong> dengan apa yang dirasakan
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Sangat Setuju</td>
+                    <td>Bapak/Ibu berpendapat bahwa apa yang terkandung di dalam pernyataan yang diajukan
+                      <strong>sungguh-sungguh sesuai</strong> dengan apa yang dirasakan
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-end">
+            <button type="button" class="btn btn-primary btn-lanjutkan u-mt-30px_p-10px-30px-important" id="proceedBtn"
+              disabled>Next</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /SECTION: Fungsi 2: Petunjuk Pengisian -->
+
+    <!-- SECTION: Identitas Orang Tua -->
+    <section id="orang-tua" class="orang-tua section u-d-none-2">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+          <div class="col-12">
+            <div class="orang-tua-form" data-aos="fade-up" data-aos-delay="300">
+              <form id="orangTuaForm" action="/pengisian" method="post" class="php-email-form" data-aos="fade-up"
+                data-aos-delay="200">
+                <div class="col-12">
+                  <h3 class="u-ff-Mont-HeavyDEMO-var-headi_fs-2rem">Identitas Orang Tua</h3>
+                  <hr>
+                </div>
+                <div class="row gy-3">
+                  <div class="col-md-6">
+                    <input type="text" name="nama_responden" class="form-control" placeholder="Nama Lengkap Orang Tua">
+                    <small class="text-muted">* Bagian ini bersifat opsional.</small>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="email" name="email" class="form-control" id="emailInput" placeholder="Email Orang Tua"
+                      required title="Format email tidak valid. Harap sertakan @ dan . dalam alamat email.">
+                    <small class="text-muted">* Masukkan alamat email yang dapat dihubungi ― contoh:
+                      nama@example.com.</small>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <input type="text" name="tanggal_lahir" class="form-control date-input"
+                        placeholder="Tanggal Lahir" required title="Tanggal lahir wajib diisi." readonly>
+                      <span class="input-group-text u-cur-pointer-2">
+                        <i class="bi bi-calendar"></i>
+                      </span>
+                    </div>
+                    <small class="text-muted">* Masukkan tanggal lahir Anda.</small>
+                  </div>
+                  <div class="col-md-6">
+                    <select name="pekerjaan" class="form-control" required title="Pekerjaan wajib dipilih.">
+                      <option value="">Pilih Pekerjaan</option>
+                      <option value="PNS/TNI/Polri">Pegawai Negeri (PNS / TNI / Polri)</option>
+                      <option value="Pegawai Swasta">Pegawai Swasta / Karyawan Kantor</option>
+                      <option value="Wiraswasta">Wiraswasta / Pengusaha</option>
+                      <option value="Pedagang">Pedagang / Penjual</option>
+                      <option value="Petani/Peternak/Perkebun">Petani / Peternak / Perkebun</option>
+                      <option value="Nelayan">Nelayan</option>
+                      <option value="Buruh">Buruh / Pekerja Harian / Kuli</option>
+                      <option value="Transportasi">Sopir / Ojek / Transportasi</option>
+                      <option value="Tenaga Pendidik">Guru / Dosen / Tenaga Pendidik</option>
+                      <option value="Tenaga Kesehatan">Tenaga Kesehatan (Dokter, Perawat, Bidan, dsb.)</option>
+                      <option value="Ibu Rumah Tangga">Ibu Rumah Tangga</option>
+                      <option value="Pensiunan">Pensiunan</option>
+                      <option value="Tidak Bekerja">Tidak Bekerja</option>
+                      <option value="Lainnya">Lainnya</option>
+                    </select>
+                    <small class="text-muted">* Silakan pilih "Lainnya" jika tidak ada.</small>
+                  </div>
+                  <div class="col-12">
+                    <input type="text" name="alamat" class="form-control" placeholder="Alamat Lengkap" required
+                      title="Alamat wajib diisi.">
+                    <small class="text-muted">* Masukkan alamat sesuai tempat tinggal.</small>
+                  </div>
+                  <div class="col-md-6">
+                    <select name="pendidikan" class="form-control" required title="Pendidikan wajib dipilih.">
+                      <option value="">Pilih Pendidikan</option>
+                      <option value="SD">SD</option>
+                      <option value="SMP">SMP</option>
+                      <option value="SMA">SMA</option>
+                      <option value="Diploma">Diploma</option>
+                      <option value="Sarjana">Sarjana</option>
+                      <option value="Magister">Magister</option>
+                      <option value="Doktor">Doktor</option>
+                      <option value="Lainnya">Lainnya</option>
+                    </select>
+                    <small class="text-muted">* Masukkan pendidikan terakhir anda.</small>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                      <label class="me-3">Riwayat Gondok:</label>
+                      <div class="d-flex align-items-center">
+                        <div class="me-3">
+                          <input type="radio" id="gondok_ya" name="riwayat_gondok" value="Ya" required>
+                          <label for="gondok_ya" class="ms-1">Ya</label>
+                        </div>
+                        <div>
+                          <input type="radio" id="gondok_tidak" name="riwayat_gondok" value="Tidak" required>
+                          <label for="gondok_tidak" class="ms-1">Tidak</label>
+                        </div>
+                      </div>
+                    </div>
+                    <small class="text-muted">* Apakah Anda memiliki riwayat penyakit gondok?</small>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="200">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center u-mt-55px">
+              <button type="button" class="btn btn-primary btn-kembali u-p-10px-30px"
+                id="kembaliBtnOrangTua">Back</button>
+              <button type="button" class="btn btn-primary btn-lanjutkan u-p-10px-30px" id="lanjutkanBtn"
+                disabled>Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /SECTION: Fungsi 3: Identitas Orang Tua -->
+
+    <!-- SECTION: Identitas Balita -->
+    <section id="balita" class="balita section u-d-none-2">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+          <div class="col-12">
+            <div class="balita-form" data-aos="fade-up" data-aos-delay="300">
+              <form id="balitaForm" action="/pengisian" method="post" class="php-email-form" data-aos="fade-up"
+                data-aos-delay="200">
+                <div class="col-12 d-flex justify-content-between align-items-start">
+                  <h3 class="u-ff-Mont-HeavyDEMO-var-headi_fs-2rem">Identitas Balita</h3>
+                  <button type="button" id="addBalitaBtn" class="btn u-72910568 balita-add-btn">Tambah Balita</button>
+                </div>
+                <hr class="u-mt-0-5px">
+                <p>Mohon pastikan <strong> nama lengkap </strong> dan <strong>tanggal lahir balita diisi dengan
+                    benar</strong>, karena data ini digunakan untuk verifikasi dan pengecekan riwayat pengisian. Balita
+                  wajib berusia di bawah 5 tahun, tinggi badan harus antara 40-130 cm dan berat badan antara 1-40 kg
+                  (rentang wajar untuk balita usia 0-5 tahun).</p>
+                <div id="balitaContainer">
+                  <div class="balita-entry mb-3 p-3 border rounded u-pos-relative">
+                    <h5 class="u-ff-Mont-HeavyDEMO-var-headi">Balita 1</h5>
+                    <hr>
+                    <div class="row gy-3">
+                      <div class="col-md-6">
+                        <input type="text" name="balita_nama[]" class="form-control" placeholder="Nama Lengkap Balita"
+                          required>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="input-group">
+                          <input type="text" name="balita_tanggal_lahir[]" class="form-control date-input"
+                            placeholder="Tanggal Lahir" required readonly>
+                          <span class="input-group-text u-cur-pointer-2">
+                            <i class="bi bi-calendar"></i>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <input type="number" step="0.1" min="40" max="130" name="balita_tinggi_badan[]"
+                          class="form-control" placeholder="Tinggi Badan (cm)" required>
+                      </div>
+                      <div class="col-md-3">
+                        <input type="number" step="0.1" min="1" max="40" name="balita_berat_badan[]"
+                          class="form-control" placeholder="Berat Badan (kg)" required>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                          <label class="me-3">Jenis Kelamin:</label>
+                          <div class="d-flex align-items-center">
+                            <div class="me-3">
+                              <input type="radio" id="jk_laki_0" name="balita_jenis_kelamin[0]" value="Laki-laki"
+                                required>
+                              <label for="jk_laki_0" class="ms-1">Laki-laki</label>
+                            </div>
+                            <div>
+                              <input type="radio" id="jk_perempuan_0" name="balita_jenis_kelamin[0]" value="Perempuan"
+                                required>
+                              <label for="jk_perempuan_0" class="ms-1">Perempuan</label>
+                            </div>
+                          </div>
+                        </div>
+                        <small class="text-muted">* Pilih jenis kelamin balita.</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="200">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center u-mt-55px">
+              <button type="button" class="btn btn-primary btn-kembali u-p-10px-30px"
+                id="kembaliBtnBalita">Back</button>
+              <button type="button" class="btn btn-primary btn-lanjutkan u-p-10px-30px" id="lanjutkanBalitaBtn"
+                disabled>Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /SECTION: Fungsi 4: Identitas Balita -->
+
+    <!-- SECTION: Kuesioner -->
+    <section id="kuesioner" class="features section u-d-none-2">
+      <div class="container u-pb-30px-important" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+          <div class="col-12">
+            <div class="kuesioner-form" data-aos="fade-up" data-aos-delay="300">
+              <div class="col-12">
+                <h3 class="u-ff-Mont-HeavyDEMO-var-headi_fs-2rem">Kuesioner Umum</h3>
+                <hr>
+                <p>Pilih jawaban yang paling sesuai dengan kondisi Anda.</p>
+
+                <div class="progress mb-4 u-h-20px">
+                  <div class="progress-bar bg-success u-w-0pct" role="progressbar" id="questionnaireProgress"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <div id="generalQuestions" data-aos="fade-up" data-aos-delay="200">
+
+              </div>
+              <div class="balita-container">
+                <h3 class="u-ff-Mont-HeavyDEMO-var-headi_fs-2rem">Kuesioner Balita</h3>
+                <hr>
+                <p>Pilih jawaban yang paling sesuai dengan kondisi balita Anda.</p>
+
+                <div class="d-flex justify-content-center">
+                  <ul class="nav nav-tabs justify-content-center" id="balitaTabs" role="tablist" data-aos="fade-up"
+                    data-aos-delay="100">
+
+                  </ul>
+                </div>
+                <div class="tab-content" id="balitaTabContent" data-aos="fade-up" data-aos-delay="200">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container u-mt-30px" data-aos="fade-up" data-aos-delay="200">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center u-mt-55px">
+              <button type="button" class="btn btn-primary btn-kembali u-p-10px-30px"
+                id="kembaliBtnKuesioner">Back</button>
+              <button type="button" class="btn btn-primary btn-lanjutkan u-p-10px-30px" id="nextBtnKuesioner"
+                disabled>Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /SECTION: Fungsi 5: Kuesioner -->
+
+    <!-- SECTION: Selesai -->
+    <section id="selesai" class="selesai section u-d-none-2">
+      <div class="container section-title">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="info-box mb-4">
+              <h2 class="u-c-EAA0A3_ff-Mont-HeavyDEMO-var-headi">Terima Kasih!</h2>
+              <hr>
+              <p class="u-5585d165">Terima kasih atas kesediaan anda mengisi kuesioner. Data yang telah
+                anda berikan akan sangat membantu dalam penelitian dan pencegahan stunting pada balita. <strong
+                  class="u-c-EAA0A3-2">Silakan klik tombol "Submit" untuk mengirimkan data Anda.</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container u-mt-30px" data-aos="fade-up" data-aos-delay="200">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center u-mb-30px">
+              <button type="button" class="btn btn-primary btn-kembali u-p-10px-30px"
+                id="kembaliBtnSelesai">Back</button>
+              <button type="button" class="btn btn-primary btn-lanjutkan u-p-10px-30px" id="submitBtn"
+                disabled>Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /SECTION: Fungsi 6: Selesai -->
+
+  </main>
+
+  <!-- SECTION: Footer -->
+  <footer id="footer" class="footer light-background py-5">
+    <div class="container">
+      <div class="row gy-4 justify-content-between align-items-start">
+
+        <div class="col-lg-6 col-md-7">
+          <a href="/" class="logo d-flex align-items-center mb-3">
+            <img src="assets/img/LOGO.png" alt="StunTrack" class="u-h-50px_mr-10px">
+          </a>
+          <p class="text-muted mb-0">
+            StunTrack merupakan platform digital yang dirancang untuk membantu orang tua
+            memantau tumbuh kembang balita secara mandiri. Dengan memanfaatkan teknologi, StunTrack mendukung deteksi
+            dini risiko stunting serta membantu orang tua memperoleh informasi yang lebih mudah dipahami.
+          </p>
+        </div>
+
+        <div class="col-lg-4 col-md-5">
+          <h5 class="fw-semibold mb-3">Hubungi Kami</h5>
+          <p class="text-muted mb-1">Fakultas STEM Universitas Brawijaya</p>
+          <p class="text-muted mb-1">Jl. Veteran, Malang 65145</p>
+          <p class="text-muted mb-1">
+            <strong>Phone:</strong>
+            <span>+62 813-2970-7103 / +62 813-2510-8545</span>
+          </p>
+          <p class="text-muted mb-0">
+            <strong>Email:</strong>
+            <span>stuntingtracking@gmail.com</span>
+          </p>
+        </div>
+      </div>
+      <hr class="my-4">
+
+      <div class="text-center small text-muted">
+        © 2026 <strong class="sitename">StunTrack</strong> — All Rights Reserved
+      </div>
+    </div>
+  </footer>
+  <!-- /SECTION: Footer -->
+
+  <!-- SECTION: Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- /SECTION: Scroll Top -->
+
+  <!-- SECTION: Datepicker Modal -->
+  <div id="datepicker-modal" class="datepicker-modal u-d-none-2">
+    <div class="datepicker-overlay" id="datepicker-overlay"></div>
+    <div class="datepicker-container">
+      <div class="datepicker-header">
+        <button type="button" class="datepicker-nav-btn" id="prev-month">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+        <div class="datepicker-month-year">
+          <select id="datepicker-month" class="datepicker-select"></select>
+          <select id="datepicker-year" class="datepicker-select"></select>
+        </div>
+        <button type="button" class="datepicker-nav-btn" id="next-month">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+      </div>
+      <div class="datepicker-calendar">
+        <div class="datepicker-weekdays">
+          <div>Min</div>
+          <div>Sen</div>
+          <div>Sel</div>
+          <div>Rab</div>
+          <div>Kam</div>
+          <div>Jum</div>
+          <div>Sab</div>
+        </div>
+        <div class="datepicker-days" id="datepicker-days"></div>
+      </div>
+      <div class="datepicker-actions">
+        <button type="button" class="btn btn-secondary" id="datepicker-cancel">Batal</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- /SECTION: Datepicker Modal -->
+
+  <!-- SECTION: Modal Email Sudah Terdaftar -->
+  <div class="modal fade" id="emailExistsModal" tabindex="-1" aria-labelledby="emailExistsModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content u-br-15px_bd-none_bs-0-10px-30px-rgba-0-0-0-0">
+        <div class="modal-header u-babcc695">
+          <h5 class="modal-title u-7743785a" id="emailExistsModalLabel">
+            <i class="bi bi-exclamation-triangle-fill me-2 u-c-white"></i>Email Sudah Terdaftar
+          </h5>
+        </div>
+        <div class="modal-body u-p-1-5rem_maxh-60vh_ovy-auto">
+          <div id="parentInfo" class="mb-3">
+
+          </div>
+          <div id="childrenInfo">
+
+          </div>
+        </div>
+        <div class="modal-footer u-p-1-5rem-2rem_jc-center">
+          <button type="button" class="btn btn-outline-secondary me-3 u-br-25px_p-10px-30px_fw-500"
+            id="bukanSayaBtn">Bukan Saya</button>
+          <button type="button" class="btn u-42e2db19" id="yaItuSayaBtn">Ya, Itu Saya</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- /SECTION: Modal Email Sudah Terdaftar -->
+
+  <!-- SECTION: Modal Verifikasi Tanggal Lahir -->
+  <div class="modal fade" id="birthDateModal" tabindex="-1" aria-labelledby="birthDateModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content u-br-15px_bd-none_bs-0-10px-30px-rgba-0-0-0-0">
+        <div class="modal-header u-babcc695">
+          <h5 class="modal-title u-7743785a" id="birthDateModalLabel">
+            <i class="bi bi-calendar-check me-2 u-c-white"></i>Verifikasi Tanggal Lahir Balita
+          </h5>
+        </div>
+        <div class="modal-body u-p-2rem">
+          <div id="birthDateInputs" class="row g-3">
+
+          </div>
+        </div>
+        <div class="modal-footer u-p-1-5rem-2rem_jc-center_fw2-wrap_gap-10px">
+          <button type="button" class="btn btn-outline-secondary u-br-25px_p-10px-30px_fw-500"
+            data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-outline-secondary u-br-25px_p-10px-30px_fw-500" id="hapusDataBtn">Hapus
+            Data</button>
+          <button type="button" class="btn u-42e2db19" id="verifyBirthDatesBtn">Verifikasi dan Update Data</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- /SECTION: Modal Verifikasi Tanggal Lahir -->
+  <!-- SECTION: Scripts -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pages/kuesioner.js"></script>
+  <!-- /SECTION: Scripts -->
+</body>
+
+</html>

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>StunTrack</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- SECTION: Favicons -->
+  <link href="assets/img/LOGO-2.png" rel="icon">
+  <link href="assets/img/LOGO-2.png" rel="apple-touch-icon">
+
+  <!-- /SECTION: Favicons -->
+
+  <!-- SECTION: Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- /SECTION: Fonts -->
+
+  <!-- SECTION: Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- /SECTION: Vendor CSS Files -->
+
+  <!-- SECTION: Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- /SECTION: Main CSS File -->
+
+</head>
+
+<body class="index-page">
+
+  <!-- SECTION: Header -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div
+      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="#hero" class="logo d-flex align-items-center me-auto me-xl-0">
+        <h1 class="sitename">
+          <img src="assets/img/LOGO.png" alt="StunTrack">
+        </h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#history">History</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a class="btn-getstarted" href="admin-login.html">Admin</a>
+    </div>
+  </header>
+  <!-- /SECTION: Header -->
+
+  <main class="main">
+
+    <!-- SECTION: Delete Success Modal -->
+    <div class="modal fade" id="deleteSuccessModal" tabindex="-1" aria-labelledby="deleteSuccessModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content u-br-15px_bd-none_bs-0-10px-30px-rgba-0-0-0-0">
+          <div class="modal-header u-7ab601c4">
+            <h5 class="modal-title u-32a4fb6d" id="deleteSuccessModalLabel">Penghapusan Data Berhasil</h5>
+          </div>
+          <div class="modal-body u-p-1-75rem-1-5rem">
+            <p class="u-fs-1-05rem_mb-0_c-212529_ta-center">
+              Seluruh data yang terkait dengan email tersebut telah dihapus dari sistem, sehingga email tersebut kini
+              dapat digunakan kembali untuk melakukan registrasi stunting tracking. Terima kasih telah menggunakan
+              layanan kami.
+            </p>
+          </div>
+          <div class="modal-footer u-p-1-5rem-2rem_jc-center_d-none"></div>
+        </div>
+      </div>
+    </div>
+    <!-- /SECTION: Delete Success Modal -->
+
+    <!-- SECTION: Delete Error Modal -->
+    <div class="modal fade" id="deleteErrorModal" tabindex="-1" aria-labelledby="deleteErrorModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content u-br-15px_bd-none_bs-0-10px-30px-rgba-0-0-0-0">
+          <div class="modal-header u-7ab601c4">
+            <h5 class="modal-title u-32a4fb6d" id="deleteErrorModalLabel">Tautan Tidak Dapat Diproses</h5>
+          </div>
+          <div class="modal-body u-p-1-75rem-1-5rem">
+            <p id="deleteErrorText" class="u-fs-1-05rem_mb-0_c-212529_ta-center"></p>
+          </div>
+          <div class="modal-footer u-p-1-5rem-2rem_jc-center_d-none"></div>
+        </div>
+      </div>
+    </div>
+    <!-- /SECTION: Delete Error Modal -->
+
+    <!-- SECTION: Isi Lagi Notice Modal -->
+    <div class="modal fade" id="isiLagiNoticeModal" tabindex="-1" aria-labelledby="isiLagiNoticeModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content u-br-15px_bd-none_bs-0-10px-30px-rgba-0-0-0-0">
+          <div class="modal-header u-7ab601c4">
+            <h5 class="modal-title u-e4a9eb90" id="isiLagiNoticeModalLabel">Pengisian Dibatalkan</h5>
+          </div>
+          <div class="modal-body u-p-1-75rem-1-5rem">
+            <p id="isiLagiNoticeText" class="u-fs-1-05rem_c-212529_ta-center_mb-0-5rem"></p>
+          </div>
+          <div class="modal-footer u-p-1-5rem-2rem_jc-center">
+            <button type="button" class="btn u-42e2db19" data-bs-dismiss="modal">Oke, Mengerti</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /SECTION: Isi Lagi Notice Modal -->
+
+    <!-- SECTION: Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+              <div class="company-badge mb-4">
+                Selamat Datang di StunTrack!
+              </div>
+              <h1 class="mb-4 u-c-EAA0A3"><span class="accent-text">Stunting</span>Tracking</h1>
+              <p class="mb-4 mb-md-5">
+                Setiap data punya makna. Melalui platform ini, kami akan membantu Anda melacak, menganalisis, dan
+                mencegah terjadinya stunting pada balita sebagai upaya mewujudkan tumbuh kembang balita yang lebih baik.
+              </p>
+              <div class="hero-buttons">
+                <a href="kuesioner.html" class="btn btn-primary me-0 me-sm-2 mx-1">Cegah Stunting</a>
+                <a href="#history" class="btn btn-primary me-0 me-sm-2 mx-1">Cek Riwayat Analisis</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
+              <img src="assets/img/illustration-1.png" alt="Hero Image" class="img-fluid">
+            </div>
+          </div>
+        </div>
+        <div class="row stats-row gy-1 mt-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <i class="bi bi-people-fill"></i>
+              </div>
+              <div class="stat-content">
+                <span id="kontributor-count" class="u-fw-bold">0</span>
+                <p class="mb-0">Balita yang<br>Telah Terdata</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <i class="bi bi-emoji-smile-fill"></i>
+              </div>
+              <div class="stat-content">
+                <span id="normal-count" class="u-fw-bold">0</span>
+                <p class="mb-0">Balita Kondisi<br>Normal</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <i class="bi bi-emoji-frown-fill"></i>
+              </div>
+              <div class="stat-content">
+                <span id="pendek-count" class="u-fw-bold">0</span>
+                <p class="mb-0">Balita Kondisi<br>Pendek</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <i class="bi bi-emoji-dizzy-fill"></i>
+              </div>
+              <div class="stat-content">
+                <span id="severe-count" class="u-fw-bold">0</span>
+                <p class="mb-0">Balita Kondisi<br>Sangat Pendek</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /SECTION: Hero Section -->
+
+    <!-- SECTION: About -->
+    <section id="about" class="about section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 align-items-center justify-content-between">
+          <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
+            <span class="about-meta u-fw-bold_c-EAA0A3">Tentang Stunting Tracking</span>
+            <h2 class="about-title u-ff-Mont-HeavyDEMO-var-headi">Apa itu StunTrack?</h2>
+            <p class="about-description">StunTrack merupakan platform digital yang dirancang untuk membantu orang tua
+              memantau tumbuh kembang balita secara mandiri. Dengan memanfaatkan teknologi, StunTrack mendukung deteksi
+              dini risiko stunting serta membantu orang tua memperoleh informasi yang lebih mudah dipahami.</p>
+            <p class="u-fw-bold_c-EAA0A3">Dengan mengisi kuesioner, Anda akan mendapatkan:</p>
+            <div class="row feature-list-wrapper">
+              <div class="col-md-12">
+                <ul class="feature-list">
+                  <li><i class="bi bi-check-circle-fill"></i>Hasil klasifikasi kondisi balita normal, pendek, ataupun
+                    sangat pendek berdasarkan tinggi badan dan usia terkini.</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Identifikasi faktor risiko stunting yang paling berpengaruh pada
+                    balita Anda berdasarkan informasi melalui kuesioner.</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Riwayat analisis yang tersimpan untuk memantau perkembangan
+                    balita dari waktu ke waktu.</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Laporan hasil analisis yang dapat diunduh sebagai referensi
+                    diskusi dengan tenaga kesehatan terdekat.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 d-none d-xl-block" data-aos="fade-up" data-aos-delay="300">
+            <div class="image-wrapper">
+              <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
+                <img src="assets/img/img-1.png" alt="Children" class="img-fluid main-image rounded-4">
+                <img src="assets/img/img-2.png" alt="Children Close Up" class="img-fluid small-image rounded-4">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /SECTION: About -->
+
+    <!-- SECTION: Form Riwayat -->
+    <section id="history" class="call-to-action-2 section dark-background u-mb-60px">
+      <div class="container section-title">
+        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-8">
+            <div class="text-center">
+              <h2>Cek Riwayat Analisis</h2>
+              <p>
+                Untuk melihat kembali hasil analisis yang telah Anda isi sebelumnya, <br>
+                silahkan masukkan nama lengkap balita, tanggal lahir balita, dan tanggal lahir orang tua.
+              </p>
+              <br>
+
+              <form id="history-form" action="summary.html" method="get"
+                class="d-flex justify-content-center align-items-end flex-wrap gap-3 u-gap-15px">
+                <div class="d-flex flex-column text-center">
+                  <label for="nama" class="u-fw-500_c-EAA0A3_mb-5px">Nama Lengkap Balita</label>
+                  <input type="text" id="nama" name="nama" placeholder="Amanda Renata" class="form-control u-1cef11ae"
+                    required>
+                </div>
+                <div class="d-flex flex-column text-center">
+                  <label for="tanggal" class="u-fw-500_c-EAA0A3_mb-5px">Tanggal Lahir Balita</label>
+                  <div class="input-group u-w-250px_m-0-auto">
+                    <input type="text" id="tanggal" name="tanggal" placeholder="1 Januari 2025"
+                      class="form-control date-input u-ta-center" required>
+                    <span class="input-group-text u-cur-pointer-2"><i class="bi bi-calendar"></i></span>
+                  </div>
+                </div>
+                <div class="d-flex flex-column text-center">
+                  <label for="tanggal-orang-tua" class="u-fw-500_c-EAA0A3_mb-5px">Tanggal Lahir Orang Tua</label>
+                  <div class="input-group u-w-250px_m-0-auto">
+                    <input type="text" id="tanggal-orang-tua" name="tanggal-orang-tua" placeholder="1 Desember 2000"
+                      class="form-control date-input u-ta-center" required>
+                    <span class="input-group-text u-cur-pointer-2"><i class="bi bi-calendar"></i></span>
+                  </div>
+                </div>
+              </form>
+              <br>
+              <div class="d-flex justify-content-center">
+                <button type="submit" form="history-form" class="cta-btn u-p-12px-25px">Cek Sekarang</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /SECTION: Fungsi 1: Form Riwayat -->
+
+    <!-- SECTION: Features -->
+    <section id="features" class="features-cards section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="u-ff-Mont-HeavyDEMO-var-headi">StunTrack Features</h2>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-xl-6 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="feature-box pink">
+              <i class="bi bi-exclamation-triangle-fill"></i>
+              <div class="text-content">
+                <h4>Deteksi Dini Status Pertumbuhan Standar WHO</h4>
+                <p>Mengetahui kondisi balita berdasarkan tinggi badan dan usia, sehingga orang tua bisa mengambil
+                  tindakan sejak dini.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="feature-box pink">
+              <i class="bi bi-shield-fill-check"></i>
+              <div class="text-content">
+                <h4>Faktor Penyebab & Rekomendasi Pencegahan</h4>
+                <p>Mengetahui faktor yang meningkatkan maupun menurunkan risiko stunting pada balita beserta rekomendasi
+                  pencegahannya.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="feature-box pink">
+              <i class="bi bi-bar-chart-fill"></i>
+              <div class="text-content">
+                <h4>Pemantauan Pertumbuhan melalui Grafik</h4>
+                <p>Memantau perkembangan tinggi badan balita dari waktu ke waktu yang membantu orang tua melihat tren
+                  pertumbuhan.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="feature-box pink">
+              <i class="bi bi-hourglass-split"></i>
+              <div class="text-content">
+                <h4>Riwayat Hasil Analisis</h4>
+                <p>Mengakses kembali hasil analisis sebelumnya kapan saja untuk memantau perkembangan balita secara
+                  berkelanjutan.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-md-6" data-aos="zoom-in" data-aos-delay="500">
+            <div class="feature-box pink">
+              <i class="bi bi-file-earmark-pdf-fill"></i>
+              <div class="text-content">
+                <h4>Laporan Hasil Analisis dalam Format PDF</h4>
+                <p>Menyimpan hasil analisis dengan mudah untuk keperluan konsultasi ke posyandu, puskesmas, atau tenaga
+                  kesehatan.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-md-6" data-aos="zoom-in" data-aos-delay="600">
+            <div class="feature-box pink">
+              <i class="bi bi-envelope-paper-fill"></i>
+              <div class="text-content">
+                <h4>Notifikasi Email Secara Otomatis</h4>
+                <p>Menerima hasil analisis dan informasi penting langsung ke email tanpa perlu membuka aplikasi kembali.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- /SECTION: Features -->
+
+    <!-- SECTION: FAQ -->
+    <section class="faq-9 faq section light-background" id="faq">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3" data-aos="fade-up">
+            <h2 class="faq-title u-ff-Mont-HeavyDEMO-var-headi">Have a question?<br>Check out <br> the FAQ</h2>
+            <p class="faq-description">Temukan jawaban dari berbagai pertanyaan yang sering ditanyakan.</p>
+            <div class="faq-arrow d-none d-lg-block" data-aos="fade-up" data-aos-delay="200">
+              <svg class="faq-arrow" width="200" height="211" viewBox="0 0 200 211" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M198.804 194.488C189.279 189.596 179.529 185.52 169.407 182.07L169.384 182.049C169.227 181.994 169.07 181.939 168.912 181.884C166.669 181.139 165.906 184.546 167.669 185.615C174.053 189.473 182.761 191.837 189.146 195.695C156.603 195.912 119.781 196.591 91.266 179.049C62.5221 161.368 48.1094 130.695 56.934 98.891C84.5539 98.7247 112.556 84.0176 129.508 62.667C136.396 53.9724 146.193 35.1448 129.773 30.2717C114.292 25.6624 93.7109 41.8875 83.1971 51.3147C70.1109 63.039 59.63 78.433 54.2039 95.0087C52.1221 94.9842 50.0776 94.8683 48.0703 94.6608C30.1803 92.8027 11.2197 83.6338 5.44902 65.1074C-1.88449 41.5699 14.4994 19.0183 27.9202 1.56641C28.6411 0.625793 27.2862 -0.561638 26.5419 0.358501C13.4588 16.4098 -0.221091 34.5242 0.896608 56.5659C1.8218 74.6941 14.221 87.9401 30.4121 94.2058C37.7076 97.0203 45.3454 98.5003 53.0334 98.8449C47.8679 117.532 49.2961 137.487 60.7729 155.283C87.7615 197.081 139.616 201.147 184.786 201.155L174.332 206.827C172.119 208.033 174.345 211.287 176.537 210.105C182.06 207.125 187.582 204.122 193.084 201.144C193.346 201.147 195.161 199.887 195.423 199.868C197.08 198.548 193.084 201.144 195.528 199.81C196.688 199.192 197.846 198.552 199.006 197.935C200.397 197.167 200.007 195.087 198.804 194.488ZM60.8213 88.0427C67.6894 72.648 78.8538 59.1566 92.1207 49.0388C98.8475 43.9065 106.334 39.2953 114.188 36.1439C117.295 34.8947 120.798 33.6609 124.168 33.635C134.365 33.5511 136.354 42.9911 132.638 51.031C120.47 77.4222 86.8639 93.9837 58.0983 94.9666C58.8971 92.6666 59.783 90.3603 60.8213 88.0427Z"
+                  fill="currentColor"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="col-lg-9" data-aos="fade-up" data-aos-delay="300">
+            <div class="faq-container">
+
+              <div class="faq-item">
+                <h3>Apa manfaat utama StunTrack bagi saya?</h3>
+                <div class="faq-content">
+                  <p>StunTrack membantu Anda memantau kondisi pertumbuhan balita berdasarkan indikator tinggi badan
+                    menurut usia, memahami faktor-faktor yang berpengaruh terhadap risiko stunting, serta memperoleh
+                    rekomendasi pencegahan yang sesuai. Seluruh hasil analisis disajikan melalui visualisasi yang
+                    informatif dan mudah dipahami.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <div class="faq-item">
+                <h3>Apakah StunTrack berbayar dan merupakan aplikasi resmi pemerintah?</h3>
+                <div class="faq-content">
+                  <p>StunTrack dapat digunakan secara gratis tanpa biaya oleh siapa saja. StunTrack bukan merupakan
+                    aplikasi resmi pemerintah, melainkan platform berbasis riset yang dikembangkan untuk mendukung upaya
+                    pencegahan stunting melalui pemanfaatan teknologi informasi. Platform ini dapat dimanfaatkan oleh
+                    masyarakat maupun instansi terkait sebagai sarana pemantauan dan edukasi mengenai risiko stunting.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <div class="faq-item">
+                <h3>Apakah data saya aman dan dapatkah data tersebut dihapus apabila diperlukan?</h3>
+                <div class="faq-content">
+                  <p>Ya. Data Anda disimpan secara aman dan tidak akan dibagikan kepada pihak lain tanpa persetujuan.
+                    Apabila Anda ingin menghapus data, permintaan penghapusan dapat diajukan melalui tautan verifikasi
+                    yang dikirimkan ke email terdaftar. Setelah verifikasi dilakukan, seluruh data terkait akan dihapus
+                    secara permanen dari sistem.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <div class="faq-item">
+                <h3>Siapa yang dapat mengisi kuesioner dan berapa banyak balita yang dapat didaftarkan?</h3>
+                <div class="faq-content">
+                  <p>Kuesioner dapat diisi oleh orang tua atau wali yang merawat balita berusia 0 hingga 60 bulan (5
+                    tahun). Setiap akun dapat mendaftarkan hingga 4 balita pada setiap pengisian dengan menggunakan satu
+                    alamat email yang sama.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <div class="faq-item">
+                <h3>Kenapa saya diminta mengisi riwayat penyakit gondok orang tua? Apa hubungannya dengan stunting balita?
+                </h3>
+                <div class="faq-content">
+                  <p>Riwayat penyakit gondok pada orang tua menjadi salah satu indikator yang berkaitan dengan kondisi
+                    kekurangan yodium. Kekurangan yodium dapat berpengaruh terhadap perkembangan janin dan pertumbuhan
+                    balita. Informasi ini digunakan sebagai salah satu faktor dalam analisis risiko stunting untuk
+                    membantu memahami faktor-faktor yang mungkin berpengaruh, bukan untuk tujuan lain.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <div class="faq-item">
+                <h3>Apa yang terjadi jika balita saya sudah berusia lebih dari 5 tahun?</h3>
+                <div class="faq-content">
+                  <p>StunTrack dapat digunakan untuk memantau pertumbuhan balita berusia 0 hingga 60 bulan (5 tahun)
+                    berdasarkan standar pertumbuhan WHO. Apabila balita telah melewati batas usia tersebut, balita tidak
+                    dapat melakukan pengisian analisis baru. Namun, riwayat analisis yang telah dilakukan sebelumnya
+                    tetap tersimpan dan dapat dilihat sebagai catatan pertumbuhan balita.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <div class="faq-item">
+                <h3>Bagaimana jika saya salah memasukkan data balita?</h3>
+                <div class="faq-content">
+                  <p>Anda dapat melakukan pengisian ulang kuesioner dengan data yang benar. Data sebelumnya pada usia
+                    pengukuran yang sama akan otomatis diperbarui dan digantikan oleh data terbaru yang Anda masukkan.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <div class="faq-item">
+                <h3>Apakah saya perlu mengisi ulang seluruh data jika sebelumnya sudah pernah mengisi kuesioner?</h3>
+                <div class="faq-content">
+                  <p>Tidak perlu. Jika email Anda sudah terdaftar, data balita yang sebelumnya telah diinput akan
+                    otomatis muncul setelah proses verifikasi. Anda hanya perlu melengkapi atau memperbarui data terbaru
+                    tanpa harus mengulang seluruh pengisian dari awal.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <div class="faq-item">
+                <h3>Bagaimana cara melihat kembali hasil analisis balita saya yang telah dilakukan?</h3>
+                <div class="faq-content">
+                  <p>Anda dapat menggunakan fitur Cek Riwayat Analisis dengan memasukkan nama lengkap balita, tanggal
+                    lahir balita, dan tanggal lahir orang tua untuk mengakses kembali riwayat pengisian serta melihat
+                    perkembangan pertumbuhan balita melalui grafik dari waktu ke waktu.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <div class="faq-item">
+                <h3>Apakah saya bisa menghubungi tim StunTrack apabila mengalami kendala?</h3>
+                <div class="faq-content">
+                  <p>Bisa. Anda dapat menghubungi tim StunTrack melalui formulir kontak yang tersedia pada halaman utama
+                    dengan mencantumkan nama, email, subjek, dan pesan yang ingin disampaikan. Pesan tersebut akan
+                    diteruskan ke email resmi StunTrack, dan Anda akan menerima konfirmasi bahwa pesan telah berhasil
+                    dikirim.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /SECTION: FAQ -->
+
+    <!-- SECTION: Cegah Stunting -->
+    <section id="cegahstunting" class="call-to-action section">
+      <div class="container u-maxw-100pct" data-aos="fade-up" data-aos-delay="100">
+        <div class="row content justify-content-center align-items-center position-relative">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="display-5 mb-4 u-ff-Mont-HeavyDEMO-var-headi_fs-40px">
+              Yuk, Cek Kondisi Balita Lebih Awal!</h2>
+            <p class="mb-4">
+              Ketahui sejak dini apakah balita Anda berisiko mengalami stunting. Isi kuesioner sekarang dan
+              ambil langkah awal untuk memantau pertumbuhannya agar berkembang secara optimal.
+            </p>
+            <a href="kuesioner.html" class="btn btn-cta">Cegah Stunting</a>
+          </div>
+
+          <div class="shape shape-1">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M47.1,-57.1C59.9,-45.6,68.5,-28.9,71.4,-10.9C74.2,7.1,71.3,26.3,61.5,41.1C51.7,55.9,35,66.2,16.9,69.2C-1.3,72.2,-21,67.8,-36.9,57.9C-52.8,48,-64.9,32.6,-69.1,15.1C-73.3,-2.4,-69.5,-22,-59.4,-37.1C-49.3,-52.2,-32.8,-62.9,-15.7,-64.9C1.5,-67,34.3,-68.5,47.1,-57.1Z"
+                transform="translate(100 100)"></path>
+            </svg>
+          </div>
+          <div class="shape shape-2">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M41.3,-49.1C54.4,-39.3,66.6,-27.2,71.1,-12.1C75.6,3,72.4,20.9,63.3,34.4C54.2,47.9,39.2,56.9,23.2,62.3C7.1,67.7,-10,69.4,-24.8,64.1C-39.7,58.8,-52.3,46.5,-60.1,31.5C-67.9,16.4,-70.9,-1.4,-66.3,-16.6C-61.8,-31.8,-49.7,-44.3,-36.3,-54C-22.9,-63.7,-8.2,-70.6,3.6,-75.1C15.4,-79.6,28.2,-58.9,41.3,-49.1Z"
+                transform="translate(100 100)"></path>
+            </svg>
+          </div>
+
+          <div class="dots dots-1">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <pattern id="dot-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+              </pattern>
+              <rect width="100" height="100" fill="url(#dot-pattern)"></rect>
+            </svg>
+          </div>
+          <div class="dots dots-2">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <pattern id="dot-pattern-2" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+              </pattern>
+              <rect width="100" height="100" fill="url(#dot-pattern-2)"></rect>
+            </svg>
+          </div>
+          <div class="shape shape-3">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M43.3,-57.1C57.4,-46.5,71.1,-32.6,75.3,-16.2C79.5,0.2,74.2,19.1,65.1,35.3C56,51.5,43.1,65,27.4,71.7C11.7,78.4,-6.8,78.3,-23.9,72.4C-41,66.5,-56.7,54.8,-65.4,39.2C-74.1,23.6,-75.8,4,-71.7,-13.2C-67.6,-30.4,-57.7,-45.2,-44.3,-56.1C-30.9,-67,-15.5,-74,0.7,-74.9C16.8,-75.8,33.7,-70.7,43.3,-57.1Z"
+                transform="translate(100 100)"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /SECTION: Cegah Stunting -->
+
+    <!-- SECTION: Berita -->
+    <section id="news" class="services section light-background">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="u-ff-Mont-HeavyDEMO-var-headi">Berita Stunting di Indonesia</h2>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div id="newsCardsContainer" class="row g-4">
+          <div class="col-12 text-center" id="newsLoadingNote">Memuat berita terbaru...</div>
+        </div>
+      </div>
+    </section>
+    <!-- /SECTION: Fungsi 2: Berita -->
+
+    <!-- SECTION: Form Kontak -->
+    <section id="contact" class="contact section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="u-ff-Mont-HeavyDEMO-var-headi">Contact Information</h2>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-6">
+            <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+              <h2 class="u-c-ffffff_ff-Mont-HeavyDEMO-var-headi">Contact Us</h2>
+              <hr>
+              <p>Kami siap membantu anda dengan sepenuh hati! Silakan hubungi kami melalui kontak berikut untuk
+                mendapatkan informasi lebih lanjut atau bantuan yang anda butuhkan.</p>
+              <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div class="content">
+                  <h4>Our Location</h4>
+                  <p>Jalan Veteran, Malang 65145</p>
+                  <p>Fakultas Sains, Teknologi dan Matematika, Universitas Brawijaya</p>
+                </div>
+              </div>
+              <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <div class="content">
+                  <h4>Phone Number</h4>
+                  <p>+62 813-2970-7103</p>
+                  <p>+62 813-2510-8545</p>
+                </div>
+              </div>
+              <div class="info-item" data-aos="fade-up" data-aos-delay="500">
+                <div class="icon-box">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <div class="content">
+                  <h4>Email Address</h4>
+                  <p>stuntingtracking@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+              <h2 class="u-ff-Mont-HeavyDEMO-var-headi">Get in Touch</h2>
+              <hr>
+              <p>Punya masukan, saran, pertanyaan seputar layanan kami atau bahkan membutuhkan bantuan? Isi
+                formulir dibawah ini, kami siap membantu dan akan segera menanggapi pesan anda.</p>
+              <form action="/contact" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                <div class="row gy-4">
+                  <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                  </div>
+                  <div class="col-md-6 ">
+                    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                  </div>
+                  <div class="col-12">
+                    <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                  </div>
+                  <div class="col-12">
+                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                  </div>
+                  <div class="col-12 text-center">
+                    <div class="sent-message u-bg-EAA0A3_c-white">Pesan Anda telah dikirim. Terima kasih!</div>
+                    <button type="submit" class="btn">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /SECTION: Fungsi 3: Form Kontak -->
+
+  </main>
+
+  <!-- SECTION: Footer -->
+  <footer id="footer" class="footer light-background py-5">
+    <div class="container">
+      <div class="row gy-4 justify-content-between align-items-start">
+
+        <div class="col-lg-6 col-md-7">
+          <a href="/" class="logo d-flex align-items-center mb-3">
+            <img src="assets/img/LOGO.png" alt="StunTrack" class="u-h-50px_mr-10px">
+          </a>
+          <p class="text-muted mb-0">
+            StunTrack merupakan platform digital yang dirancang untuk membantu orang tua
+            memantau tumbuh kembang balita secara mandiri. Dengan memanfaatkan teknologi, StunTrack mendukung deteksi
+            dini risiko stunting serta membantu orang tua memperoleh informasi yang lebih mudah dipahami.
+          </p>
+        </div>
+
+        <div class="col-lg-4 col-md-5">
+          <h5 class="fw-semibold mb-3">Hubungi Kami</h5>
+          <p class="text-muted mb-1">Fakultas STEM Universitas Brawijaya</p>
+          <p class="text-muted mb-1">Jl. Veteran, Malang 65145</p>
+          <p class="text-muted mb-1">
+            <strong>Phone:</strong>
+            <span>+62 813-2970-7103 / +62 813-2510-8545</span>
+          </p>
+          <p class="text-muted mb-0">
+            <strong>Email:</strong>
+            <span>stuntingtracking@gmail.com</span>
+          </p>
+        </div>
+      </div>
+      <hr class="my-4">
+
+      <div class="text-center small text-muted">
+        © 2026 <strong class="sitename">StunTrack</strong> — All Rights Reserved
+      </div>
+    </div>
+  </footer>
+  <!-- /SECTION: Footer -->
+
+  <!-- SECTION: Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- /SECTION: Scroll Top -->
+
+  <!-- SECTION: Datepicker Modal -->
+  <div id="datepicker-modal" class="datepicker-modal">
+    <div id="datepicker-overlay" class="datepicker-overlay"></div>
+    <div class="datepicker-container">
+      <div class="datepicker-header">
+        <button id="prev-month" class="datepicker-nav-btn" type="button">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+        <div class="datepicker-month-year">
+          <select id="datepicker-month" class="datepicker-select"></select>
+          <select id="datepicker-year" class="datepicker-select"></select>
+        </div>
+        <button id="next-month" class="datepicker-nav-btn" type="button">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+      </div>
+      <div class="datepicker-calendar">
+        <div class="datepicker-weekdays">
+          <div>Min</div>
+          <div>Sen</div>
+          <div>Sel</div>
+          <div>Rab</div>
+          <div>Kam</div>
+          <div>Jum</div>
+          <div>Sab</div>
+        </div>
+        <div id="datepicker-days" class="datepicker-days"></div>
+      </div>
+      <div class="datepicker-actions">
+        <button id="datepicker-cancel" class="btn btn-secondary" type="button">Batal</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- /SECTION: Datepicker Modal -->
+  <!-- SECTION: Scripts -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pages/index.js"></script>
+  <!-- /SECTION: Scripts -->
+</body>
+</html>

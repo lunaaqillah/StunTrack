@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" class="page-summary">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>StunTrack</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- SECTION: Favicons -->
+  <link href="assets/img/LOGO-2.png" rel="icon">
+  <link href="assets/img/LOGO-2.png" rel="apple-touch-icon">
+
+  <!-- /SECTION: Favicons -->
+
+  <!-- SECTION: Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- /SECTION: Fonts -->
+
+  <!-- SECTION: Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- /SECTION: Vendor CSS Files -->
+
+  <!-- SECTION: Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- /SECTION: Main CSS File -->
+
+  <!-- SECTION: Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1/dist/chartjs-plugin-zoom.min.js"></script>
+
+  <!-- /SECTION: Chart.js -->
+
+</head>
+
+<body class="index-page page-summary">
+
+  <!-- SECTION: Header -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div
+      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
+        <h1 class="sitename">
+          <img src="assets/img/LOGO.png" alt="StunTrack">
+        </h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/#hero" class="active">Home</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#history">History</a></li>
+          <li><a href="/#features">Features</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/#news">News</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a class="btn-getstarted" href="/kuesioner.html">Cegah Stunting</a>
+    </div>
+  </header>
+  <!-- /SECTION: Header -->
+
+  <main class="main">
+
+    <!-- SECTION: Page Title -->
+    <div class="page-title light-background">
+      <div class="container">
+        <h1 id="riwayat-title" class="u-ff-Mont-HeavyDEMO-var-headi">Riwayat Hasil Analisis</h1>
+        <p id="page-description" class="page-description">
+          Lihat rangkuman hasil analisis perkembangan balita anda berdasarkan data yang telah diisi sebelumnya.
+          Informasi ini membantu memantau kondisi balita dari waktu ke waktu serta memberikan gambaran mengenai risiko
+          stunting dan rekomendasi pencegahannya.
+        </p>
+      </div>
+    </div>
+    <!-- /SECTION: Page Title -->
+
+    <!-- SECTION: Not Found State -->
+    <div id="not-found-state" class="not-found-state">
+      <div class="not-found-content">
+        <div class="not-found-icon-badge"><i class="bi bi-search-heart"></i></div>
+        <h2>Data Tidak Ditemukan</h2>
+        <p>Pastikan nama dan tanggal lahir balita serta tanggal lahir orang tua sudah benar. Hubungi <a
+            href="/#contact">contact information</a> apabila ingin meminta bantuan.</p>
+      </div>
+    </div>
+    <!-- /SECTION: Not Found State -->
+
+    <!-- SECTION: Ringkasan -->
+    <section id="summary" class="summary section" style="display:none;">
+      <div class="container-fluid container-xl" data-aos="fade-up" data-aos-delay="100">
+        <div class="summary-card card shadow-lg border-0 rounded-4 p-0 overflow-hidden">
+
+          <div class="profile-hero">
+            <div class="hero-inner">
+              <div id="hero-avatar" class="hero-avatar"><i class="bi bi-person-fill"></i></div>
+              <div class="profile-hero-info">
+                <span class="profile-hero-eyebrow">Ringkasan Profil Balita</span>
+                <h3 id="hero-nama-balita">Nama Balita</h3>
+                <div class="hero-badges">
+                  <span id="hero-gender-badge" class="hero-badge"><i
+                      class="bi bi-gender-ambiguous"></i><span></span></span>
+                  <span id="hero-birth-badge" class="hero-badge"><i class="bi bi-cake2-fill"></i><span></span></span>
+                  <span id="hero-age-badge" class="hero-badge u-d-none"><i
+                      class="bi bi-hourglass-split"></i><span></span></span>
+                  <span id="hero-status-badge" class="hero-badge status-badge u-d-none"><i
+                      class="bi bi-shield-fill-check"></i><span></span></span>
+                </div>
+              </div>
+            </div>
+            <div class="hero-stats">
+              <div class="hero-stat-chip">
+                <div class="hero-stat-icon"><i class="bi bi-arrows-vertical"></i></div>
+                <div>
+                  <div class="hero-stat-label">Tinggi Terakhir</div>
+                  <div id="hero-stat-tb" class="hero-stat-value">-</div>
+                </div>
+              </div>
+              <div class="hero-stat-chip">
+                <div class="hero-stat-icon"><i class="bi bi-speedometer2"></i></div>
+                <div>
+                  <div class="hero-stat-label">Berat Terakhir</div>
+                  <div id="hero-stat-bb" class="hero-stat-value">-</div>
+                </div>
+              </div>
+              <div class="hero-stat-chip">
+                <div class="hero-stat-icon"><i class="bi bi-calendar2-check-fill"></i></div>
+                <div>
+                  <div class="hero-stat-label">Kali Pemeriksaan</div>
+                  <div id="hero-stat-jumlah" class="hero-stat-value">-</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-body p-4 pt-4">
+            <div class="identity-header-row">
+              <div class="identity-block-title">
+                <h5>Identitas Orang Tua</h5>
+              </div>
+              <div class="riwayat-gondok-alert">
+                <span class="rg-pill" id="riwayat-gondok-orang-tua"><i
+                    class="bi bi-exclamation-triangle-fill"></i><span></span></span>
+              </div>
+            </div>
+            <div class="identity-grid">
+              <div class="id-row">
+                <span class="id-icon"><i class="bi bi-person-fill"></i></span>
+                <div class="id-text">
+                  <span class="id-label">Nama Lengkap</span>
+                  <span class="id-value" id="nama-orang-tua">Nama Orang Tua</span>
+                </div>
+              </div>
+              <div class="id-row">
+                <span class="id-icon"><i class="bi bi-mortarboard-fill"></i></span>
+                <div class="id-text">
+                  <span class="id-label">Pendidikan</span>
+                  <span class="id-value" id="pendidikan-orang-tua">Pendidikan</span>
+                </div>
+              </div>
+              <div class="id-row">
+                <span class="id-icon"><i class="bi bi-cake2-fill"></i></span>
+                <div class="id-text">
+                  <span class="id-label">Tanggal Lahir</span>
+                  <span class="id-value" id="tanggal-lahir-orang-tua">Tanggal Lahir Orang Tua</span>
+                </div>
+              </div>
+              <div class="id-row">
+                <span class="id-icon"><i class="bi bi-envelope-fill"></i></span>
+                <div class="id-text">
+                  <span class="id-label">Email</span>
+                  <span class="id-value" id="email-orang-tua">Email</span>
+                </div>
+              </div>
+              <div class="id-row">
+                <span class="id-icon"><i class="bi bi-briefcase-fill"></i></span>
+                <div class="id-text">
+                  <span class="id-label">Pekerjaan</span>
+                  <span class="id-value" id="pekerjaan-orang-tua">Pekerjaan</span>
+                </div>
+              </div>
+              <div class="id-row">
+                <span class="id-icon"><i class="bi bi-geo-alt-fill"></i></span>
+                <div class="id-text">
+                  <span class="id-label">Alamat</span>
+                  <span class="id-value" id="alamat-orang-tua">Alamat</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- /SECTION: Fungsi 1: Ringkasan -->
+
+    <!-- SECTION: Grafik dan Riwayat -->
+    <section id="grafik-riwayat-section" class="grafik-riwayat-section section u-mt-70px">
+      <div class="container-fluid container-xl" data-aos="fade-up" data-aos-delay="150">
+        <div class="row g-4 align-items-stretch">
+
+          <div class="col-lg-6" id="grafik-pertumbuhan" style="display:none;">
+            <div class="riwayat-card card shadow-lg border-0 rounded-4 p-0 overflow-hidden h-100">
+              <div class="card-header py-4 d-flex align-items-center justify-content-center gap-2">
+                <h4 class="mb-0 fw-bold text-center u-c-white_ff-Mont-HeavyDEMO-var-headi">Grafik Pertumbuhan Balita
+                </h4>
+              </div>
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center justify-content-between gap-2 mb-3">
+                  <p class="text-start mb-0 u-c-var-muted_fs-0-88rem">
+                    Grafik ini menampilkan seluruh riwayat tinggi badan balita dibandingkan garis median dan standar
+                    deviasi WHO sesuai usia. </p>
+
+                  <div class="d-flex align-items-center gap-2 flex-shrink-0">
+                    <button type="button" class="growth-chart-zoom-btn" title="Perbesar"
+                      data-growth-action="zoom-in"><i class="bi bi-plus-lg"></i></button>
+                    <button type="button" class="growth-chart-zoom-btn" title="Perkecil"
+                      data-growth-action="zoom-out"><i class="bi bi-dash-lg"></i></button>
+                    <button type="button" class="growth-chart-zoom-btn" title="Reset Zoom"
+                      data-growth-action="reset"><i class="bi bi-arrow-counterclockwise"></i></button>
+                  </div>
+                </div>
+                <div class="u-pos-relative_minh-320px">
+                  <canvas id="growth-chart-summary"></canvas>
+                </div>
+                <div id="growth-chart-legend-summary" class="d-flex flex-wrap justify-content-center mt-2 px-1"></div>
+                <div id="growth-chart-summary-empty" class="riwayat-empty-state" style="display:none;">
+                  <i class="bi bi-graph-up"></i>
+                  <p>Belum ada cukup data riwayat untuk menampilkan grafik pertumbuhan.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" id="riwayat" style="display:none;">
+            <div class="riwayat-card card shadow-lg border-0 rounded-4 p-0 overflow-hidden h-100">
+              <div class="card-header py-4">
+                <h4 class="mb-0 fw-bold text-center u-c-white_ff-Mont-HeavyDEMO-var-headi">Riwayat Pengisian</h4>
+              </div>
+              <div class="card-body p-4 u-ovy-auto" id="riwayat-scroll-body">
+                <div id="riwayat-content">
+
+                </div>
+                <div id="riwayat-content-empty" class="riwayat-empty-state" style="display:none;">
+                  <i class="bi bi-journal-x"></i>
+                  <p>Belum ada riwayat pengisian untuk balita ini.</p>
+                </div>
+              </div>
+
+              <template id="tpl-riwayat-item">
+                <div class="riwayat-item">
+                  <div class="riwayat-item-row">
+                    <div class="riwayat-left-group">
+                      <div class="riwayat-date">
+                        <span class="rd-day js-rd-day"></span>
+                        <span class="rd-age js-rd-age"></span>
+                      </div>
+                      <div class="riwayat-metrics">
+                        <span class="riwayat-metric-plain"><i class="bi bi-arrows-vertical"></i><span
+                            class="js-tb"></span></span>
+                        <span class="riwayat-metric-plain"><i class="bi bi-speedometer2"></i><span
+                            class="js-bb"></span></span>
+                      </div>
+                    </div>
+                    <div class="riwayat-right-group">
+                      <span class="riwayat-status"><span class="status-pill js-status-pill"></span></span>
+                      <span class="riwayat-action"><button type="button"
+                          class="summary-btn-outline-pink btn-outline-pink-icon js-btn-cek" title="Cek Riwayat"
+                          aria-label="Cek Riwayat"><i class="bi bi-eye"></i></button></span>
+                    </div>
+                  </div>
+                </div>
+              </template>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- /SECTION: Fungsi 2: Grafik dan Riwayat -->
+
+  </main>
+
+  <!-- SECTION: Footer -->
+  <footer id="footer" class="footer light-background py-5">
+    <div class="container">
+      <div class="row gy-4 justify-content-between align-items-start">
+
+        <div class="col-lg-6 col-md-7">
+          <a href="/" class="logo d-flex align-items-center mb-3">
+            <img src="assets/img/LOGO.png" alt="StunTrack" class="u-h-50px_mr-10px">
+          </a>
+          <p class="text-muted mb-0">
+            StunTrack merupakan platform digital yang dirancang untuk membantu orang tua
+            memantau tumbuh kembang balita secara mandiri. Dengan memanfaatkan teknologi, StunTrack mendukung deteksi
+            dini risiko stunting serta membantu orang tua memperoleh informasi yang lebih mudah dipahami.
+          </p>
+        </div>
+
+        <div class="col-lg-4 col-md-5">
+          <h5 class="fw-semibold mb-3">Hubungi Kami</h5>
+          <p class="text-muted mb-1">Fakultas STEM Universitas Brawijaya</p>
+          <p class="text-muted mb-1">Jl. Veteran, Malang 65145</p>
+          <p class="text-muted mb-1">
+            <strong>Phone:</strong>
+            <span>+62 813-2970-7103 / +62 813-2510-8545</span>
+          </p>
+          <p class="text-muted mb-0">
+            <strong>Email:</strong>
+            <span>stuntingtracking@gmail.com</span>
+          </p>
+        </div>
+      </div>
+      <hr class="my-4">
+
+      <div class="text-center small text-muted">
+        © 2026 <strong class="sitename">StunTrack</strong> — All Rights Reserved
+      </div>
+    </div>
+  </footer>
+  <!-- /SECTION: Footer -->
+
+  <!-- SECTION: Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- /SECTION: Scroll Top -->
+  <!-- SECTION: Scripts -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pages/summary.js"></script>
+  <!-- /SECTION: Scripts -->
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Dashboard Admin - StunTrack</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- SECTION: Favicons -->
+  <link href="assets/img/LOGO-2.png" rel="icon">
+  <link href="assets/img/LOGO-2.png" rel="apple-touch-icon">
+
+  <!-- /SECTION: Favicons -->
+
+  <!-- SECTION: Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- /SECTION: Fonts -->
+
+  <!-- SECTION: Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- /SECTION: Vendor CSS Files -->
+
+  <!-- SECTION: Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- /SECTION: Main CSS File -->
+
+  <!-- SECTION: Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- /SECTION: Chart.js -->
+
+</head>
+
+<body class="index-page page-admin-dashboard">
+
+  <!-- SECTION: Header -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div
+      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
+        <h1 class="sitename">
+          <img src="assets/img/LOGO.png" alt="StunTrack">
+        </h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#tab-overview" class="admin-tab-link active">Overview</a></li>
+          <li><a href="#tab-Analysis" class="admin-tab-link">Analysis</a></li>
+          <li><a href="#tab-Insights" class="admin-tab-link">Insights</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <div class="admin-navbar-actions">
+        <span class="admin-email-chip"><i class="bi bi-person-circle"></i> <span id="adminEmailLabel">...</span></span>
+        <button type="button" class="btn-admin-logout" id="logoutBtn">Keluar</button>
+      </div>
+    </div>
+  </header>
+  <!-- /SECTION: Header -->
+
+  <main class="main">
+
+    <!-- SECTION: Overview (wrapper) — dimulai dari paling atas halaman (judul halaman),
+         sehingga menu "Overview" di header scroll ke puncak halaman, sebelum kotak ringkasan. -->
+    <div id="tab-overview">
+      <!-- SECTION: Page Title -->
+      <div class="page-title light-background">
+        <div class="container">
+          <span class="pt-eyebrow" id="pageTitleEyebrow">Hasil Clustering</span>
+          <h1 id="pageTitleHeading" class="u-ff-Mont-HeavyDEMO-var-headi">Segmentasi Risiko Stunting</h1>
+          <p class="page-description u-c-var-muted" id="pageTitleDesc">
+            Menelusuri karakteristik dan pola responden berdasarkan hasil segmentasi risiko stunting
+          </p>
+        </div>
+      </div>
+      <!-- /SECTION: Page Title -->
+
+      <!-- SECTION: Fungsi 2a: Overview (ringkasan cluster + profil setiap cluster) -->
+      <div class="admin-section" id="tab-overview-content">
+        <div class="container-fluid container-xl">
+
+          <!-- Segmentasi Risiko Stunting: kartu ringkasan (total + 3 cluster) di kiri + pie chart di kanan -->
+          <div class="risk-summary-layout u-mt-24px">
+            <div class="risk-summary-cards" id="clusterSummaryCards">
+              <div class="loading-note">Memuat ringkasan cluster</div>
+            </div>
+
+            <div class="risk-chart-card">
+              <h5 class="risk-chart-title">Distribusi Risiko Stunting</h5>
+              <div class="risk-chart-canvas-wrap">
+                <canvas id="riskDistributionChart" aria-label="Diagram lingkaran distribusi risiko stunting" role="img"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profil Hierarkis Risiko -->
+          <div class="admin-card card u-mt-24px hierarchical-card" id="tab-Analysis">
+            <div class="card-header hierarchical-header">
+              <div>
+                <h4><i class="bi bi-diagram-3-fill"></i> Analisis Segmentasi Risiko Stunting</h4>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="risk-segment-tabs" id="riskSegmentTabs">
+                <button type="button" class="risk-segment-tab active" data-segment="tinggi">
+                  <span class="rst-dot"></span>
+                  <span><strong>Risiko Stunting Tinggi</strong></span>
+                </button>
+                <button type="button" class="risk-segment-tab" data-segment="sedang">
+                  <span class="rst-dot"></span>
+                  <span><strong>Risiko Stunting Sedang</strong></span>
+                </button>
+                <button type="button" class="risk-segment-tab" data-segment="rendah">
+                  <span class="rst-dot"></span>
+                  <span><strong>Risiko Stunting Rendah</strong></span>
+                </button>
+              </div>
+
+              <div id="hierarchicalInsightContent">
+                <div class="loading-note">Memuat profil hierarkis...</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ringkasan karakteristik cluster lama dipertahankan tersembunyi
+               sebagai fallback untuk kompatibilitas JS lama. -->
+          <div id="clusterHighlightCards" class="d-none"></div>
+          <div id="profilClusterCard" class="d-none">
+            <select id="clusterSelect"></select>
+            <span id="clusterNBadge"></span>
+            <div id="clusterBars"></div>
+          </div>
+
+        </div>
+      </div>
+      <!-- /SECTION: Fungsi 2a: Overview -->
+    </div>
+    <!-- /SECTION: Overview (wrapper) -->
+
+    <!-- SECTION: Fungsi 2b: Insight (prioritas & rekomendasi intervensi keseluruhan) -->
+    <div class="admin-section" id="tab-Insights">
+      <div class="container-fluid container-xl">
+
+        <div class="admin-card card u-mt-24px hierarchical-card" id="insightCard">
+          <div class="card-header hierarchical-header">
+            <div>
+              <h4><i class="bi bi-clipboard2-pulse-fill"></i> Prioritas dan Rekomendasi Intervensi</h4>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <div id="insightContent">
+              <div class="loading-note">Memuat kesimpulan dan rekomendasi...</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- /SECTION: Fungsi 2b: Insight -->
+
+  </main>
+
+  <!-- SECTION: Footer -->
+  <footer id="footer" class="footer light-background py-5">
+    <div class="container">
+      <div class="row gy-4 justify-content-between align-items-start">
+
+        <div class="col-lg-6 col-md-7">
+          <a href="/" class="logo d-flex align-items-center mb-3">
+            <img src="assets/img/LOGO.png" alt="StunTrack" class="u-h-50px_mr-10px">
+          </a>
+          <p class="text-muted mb-0">
+            StunTrack merupakan platform digital yang dirancang untuk membantu orang tua
+            memantau tumbuh kembang balita secara mandiri. Dengan memanfaatkan teknologi, StunTrack mendukung deteksi
+            dini risiko stunting serta membantu orang tua memperoleh informasi yang lebih mudah dipahami.
+          </p>
+        </div>
+
+        <div class="col-lg-4 col-md-5">
+          <h5 class="fw-semibold mb-3">Hubungi Kami</h5>
+          <p class="text-muted mb-1">Fakultas STEM Universitas Brawijaya</p>
+          <p class="text-muted mb-1">Jl. Veteran, Malang 65145</p>
+          <p class="text-muted mb-1">
+            <strong>Phone:</strong>
+            <span>+62 813-2970-7103 / +62 813-2510-8545</span>
+          </p>
+          <p class="text-muted mb-0">
+            <strong>Email:</strong>
+            <span>stuntingtracking@gmail.com</span>
+          </p>
+        </div>
+      </div>
+      <hr class="my-4">
+
+      <div class="text-center small text-muted">
+        © 2026 <strong class="sitename">StunTrack</strong> — All Rights Reserved
+      </div>
+    </div>
+  </footer>
+  <!-- /SECTION: Footer -->
+
+  <!-- SECTION: Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- /SECTION: Scroll Top -->
+
+  <!-- SECTION: Scripts -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pages/admin-dashboard.js"></script>
+  <!-- /SECTION: Scripts -->
+</body>
+</html>

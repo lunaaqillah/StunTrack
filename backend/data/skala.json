@@ -1,0 +1,29 @@
+{
+  "scales": [
+    {
+      "id_skala": 1,
+      "skala": "Sangat Tidak Setuju",
+      "keterangan": "Bapak/Ibu berpendapat bahwa apa yang terkandung di dalam pernyataan yang diajukan sungguh-sungguh tidak sesuai dengan apa yang dirasakan."
+    },
+    {
+      "id_skala": 2,
+      "skala": "Tidak Setuju",
+      "keterangan": "Bapak/Ibu berpendapat bahwa apa yang terkandung di dalam pernyataan yang diajukan tidak sesuai dengan apa yang dirasakan."
+    },
+    {
+      "id_skala": 3,
+      "skala": "Netral",
+      "keterangan": "Bapak/Ibu tidak mempunyai pendapat tentang apa yang terkandung di dalam pernyataan."
+    },
+    {
+      "id_skala": 4,
+      "skala": "Setuju",
+      "keterangan": "Bapak/Ibu berpendapat bahwa apa yang terkandung di dalam pernyataan yang diajukan sesuai dengan apa yang dirasakan."
+    },
+    {
+      "id_skala": 5,
+      "skala": "Sangat Setuju",
+      "keterangan": "Bapak/Ibu berpendapat bahwa apa yang terkandung di dalam pernyataan yang diajukan sungguh-sungguh sesuai dengan apa yang dirasakan."
+    }
+  ]
+}

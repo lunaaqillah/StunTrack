@@ -1,0 +1,132 @@
+{
+  "X1": {
+    "name": "Pengetahuan Ibu",
+    "berpengaruh": "Pengetahuan Orang Tua tentang gizi dan stunting berperan dalam tumbuh kembang Balita. Tingkatkan pengetahuan melalui edukasi Posyandu, konsultasi dengan tenaga kesehatan, dan gunakan Buku KIA (Kesehatan Ibu dan Anak) untuk memantau pertumbuhan Balita.",
+    "tidak": "Pengetahuan Orang Tua tentang gizi dan stunting sudah baik. Pertahankan dengan mengikuti edukasi Posyandu dan memperbarui informasi tentang gizi serta tumbuh kembang Balita.",
+    "implikasi": {
+      "berpengaruh": "Kondisi tersebut menunjukkan perlunya peningkatan pemahaman orang tua mengenai gizi dan pencegahan stunting agar tumbuh kembang anak dapat terpantau dengan baik.",
+      "tidak": "Kondisi tersebut menunjukkan pemahaman orang tua mengenai gizi dan stunting sudah cukup baik dan perlu dipertahankan."
+    },
+    "rekomendasi": {
+      "berpengaruh": "Mendorong penyelenggaraan edukasi gizi secara rutin melalui Posyandu, konsultasi dengan tenaga kesehatan, serta optimalisasi pemanfaatan Buku KIA sebagai alat pemantauan pertumbuhan anak.",
+      "tidak": "Mempertahankan partisipasi aktif dalam edukasi Posyandu serta mendorong pembaruan informasi gizi dan tumbuh kembang anak secara berkala."
+    }
+  },
+  "X2": {
+    "name": "Tingkat Ekonomi",
+    "berpengaruh": "Kondisi ekonomi keluarga dapat memengaruhi pemenuhan gizi Balita. Manfaatkan bantuan pemerintah seperti PKH (Program Keluarga Harapan) dan BPNT (Bantuan Pangan Non Tunai) dengan menghubungi kelurahan/desa untuk informasi kelayakan dan pendaftaran.",
+    "tidak": "Kondisi ekonomi keluarga sudah cukup mendukung pemenuhan gizi Balita. Pertahankan dengan mengelola keuangan secara bijak dan memprioritaskan kebutuhan makanan bergizi.",
+    "implikasi": {
+      "berpengaruh": "Kondisi tersebut menunjukkan kondisi ekonomi keluarga berpotensi memengaruhi pemenuhan kebutuhan gizi anak.",
+      "tidak": "Kondisi tersebut menunjukkan kondisi ekonomi keluarga sudah cukup mendukung pemenuhan gizi anak."
+    },
+    "rekomendasi": {
+      "berpengaruh": "Mendorong pemanfaatan program bantuan pemerintah seperti PKH dan BPNT melalui koordinasi dengan kelurahan/desa untuk mempermudah akses informasi kelayakan dan pendaftaran.",
+      "tidak": "Mempertahankan pengelolaan keuangan keluarga yang baik dengan memprioritaskan pemenuhan kebutuhan makanan bergizi."
+    }
+  },
+  "X3": {
+    "name": "Pola Asuh",
+    "berpengaruh": "Pola asuh Orang Tua berperan dalam tumbuh kembang Balita. Terapkan pola asuh yang hangat dan responsif, hindari memaksa atau memarahi Balita saat makan, serta ikuti kegiatan BKB (Bina Keluarga Balita) untuk mendapatkan pendampingan.",
+    "tidak": "Pola asuh Orang Tua sudah baik dan mendukung tumbuh kembang Balita. Pertahankan dengan memberikan perhatian, mendampingi saat makan, dan menghindari paksaan.",
+    "implikasi": {
+      "berpengaruh": "Kondisi tersebut menunjukkan perlunya penguatan pola asuh yang mendukung tumbuh kembang anak secara optimal.",
+      "tidak": "Kondisi tersebut menunjukkan pola asuh orang tua sudah baik dan mendukung tumbuh kembang anak."
+    },
+    "rekomendasi": {
+      "berpengaruh": "Mendorong penerapan pola asuh yang hangat dan responsif serta partisipasi dalam kegiatan Bina Keluarga Balita (BKB) untuk pendampingan pengasuhan.",
+      "tidak": "Mempertahankan pola asuh yang responsif dengan terus memberikan perhatian dan pendampingan saat anak makan."
+    }
+  },
+  "X4": {
+    "name": "Layanan Kesehatan",
+    "berpengaruh": "Akses layanan kesehatan dapat mendukung pemantauan tumbuh kembang Balita. Rutin membawa Balita ke Posyandu atau Puskesmas untuk penimbangan, pengukuran tinggi badan, imunisasi, dan pemeriksaan kesehatan.",
+    "tidak": "Layanan kesehatan yang diakses Orang Tua sudah cukup baik. Pertahankan dengan rutin membawa Balita ke Posyandu atau Puskesmas untuk memantau pertumbuhan dan mendapatkan layanan kesehatan.",
+    "implikasi": {
+      "berpengaruh": "Kondisi tersebut menunjukkan perlunya peningkatan akses dan pemanfaatan layanan kesehatan untuk memantau tumbuh kembang anak.",
+      "tidak": "Kondisi tersebut menunjukkan pemanfaatan layanan kesehatan oleh orang tua sudah berjalan cukup baik."
+    },
+    "rekomendasi": {
+      "berpengaruh": "Mendorong kunjungan rutin ke Posyandu atau Puskesmas untuk penimbangan, pengukuran tinggi badan, imunisasi, dan pemeriksaan kesehatan anak.",
+      "tidak": "Mempertahankan kunjungan rutin ke Posyandu atau Puskesmas guna memantau pertumbuhan dan memperoleh layanan kesehatan anak."
+    }
+  },
+  "X5": {
+    "name": "Pola Makan Anak",
+    "berpengaruh": "Pola makan berperan penting dalam tumbuh kembang Balita. Terapkan pola makan beragam dan bergizi seimbang sesuai panduan \"Isi Piringku\", dengan sumber karbohidrat, protein, sayur, dan buah yang cukup.",
+    "tidak": "Pola makan Balita sudah cukup baik dan sesuai gizi seimbang. Pertahankan dengan memberikan makanan yang beragam dan bergizi serta menerapkan jadwal makan yang teratur.",
+    "implikasi": {
+      "berpengaruh": "Kondisi tersebut menunjukkan perlunya perbaikan pola makan anak agar kebutuhan gizi harian terpenuhi secara seimbang.",
+      "tidak": "Kondisi tersebut menunjukkan pola makan anak sudah cukup baik dan sesuai kebutuhan gizi seimbang."
+    },
+    "rekomendasi": {
+      "berpengaruh": "Mendorong penerapan pola makan beragam dan bergizi seimbang sesuai panduan Isi Piringku, dengan memastikan kecukupan karbohidrat, protein, sayur, dan buah.",
+      "tidak": "Mempertahankan pemberian makanan yang beragam dan bergizi dengan jadwal makan yang teratur."
+    }
+  },
+  "X6": {
+    "name": "Status Gizi Orang Tua",
+    "berpengaruh": "Status gizi Orang Tua dapat berkaitan dengan pemenuhan gizi Balita, terutama pada 1000 Hari Pertama Kehidupan (1000 HPK). Terapkan pola makan bergizi seimbang dan lakukan pemeriksaan kesehatan secara berkala di Posyandu atau Puskesmas.",
+    "tidak": "Status gizi Orang Tua sudah cukup baik dan mendukung pemenuhan gizi keluarga. Pertahankan pola makan bergizi seimbang dan lakukan pemeriksaan kesehatan secara berkala.",
+    "implikasi": {
+      "berpengaruh": "Kondisi tersebut menunjukkan status gizi orang tua, khususnya pada masa 1000 Hari Pertama Kehidupan, perlu mendapat perhatian lebih lanjut.",
+      "tidak": "Kondisi tersebut menunjukkan status gizi orang tua sudah cukup baik dan mendukung pemenuhan gizi keluarga."
+    },
+    "rekomendasi": {
+      "berpengaruh": "Mendorong penerapan pola makan bergizi seimbang bagi orang tua serta pemeriksaan kesehatan berkala di Posyandu atau Puskesmas.",
+      "tidak": "Mempertahankan pola makan bergizi seimbang serta pemeriksaan kesehatan secara berkala."
+    }
+  },
+  "X7": {
+    "name": "Lingkungan",
+    "berpengaruh": "Sanitasi dan kebersihan lingkungan berperan dalam menjaga kesehatan Balita. Pastikan tersedia air bersih dan jamban yang layak serta biasakan mencuci tangan dengan sabun sebelum makan dan setelah menggunakan toilet.",
+    "tidak": "Sanitasi dan kebersihan lingkungan rumah sudah cukup baik. Pertahankan penggunaan air bersih, jamban yang layak, dan kebiasaan mencuci tangan dengan sabun.",
+    "implikasi": {
+      "berpengaruh": "Kondisi tersebut menunjukkan perlunya perbaikan sanitasi dan kebersihan lingkungan tempat tinggal untuk mendukung kesehatan anak.",
+      "tidak": "Kondisi tersebut menunjukkan sanitasi dan kebersihan lingkungan rumah sudah cukup baik."
+    },
+    "rekomendasi": {
+      "berpengaruh": "Mendorong penyediaan akses air bersih dan jamban yang layak serta penguatan kebiasaan mencuci tangan dengan sabun sebelum makan dan setelah menggunakan toilet.",
+      "tidak": "Mempertahankan penggunaan air bersih, jamban yang layak, dan kebiasaan mencuci tangan dengan sabun."
+    }
+  },
+  "X8": {
+    "name": "Peran Pemerintah Daerah",
+    "berpengaruh": "Program pemerintah dapat mendukung pencegahan stunting dan kesehatan Balita. Cari informasi tentang penyuluhan, bantuan gizi, dan layanan kesehatan melalui Posyandu, kelurahan/desa, Puskesmas, atau Dinas Kesehatan.",
+    "tidak": "Program pemerintah di lingkungan Orang Tua sudah cukup mendukung kebutuhan Balita. Pertahankan dengan aktif mengikuti kegiatan dan memanfaatkan layanan pemerintah yang tersedia.",
+    "implikasi": {
+      "berpengaruh": "Kondisi tersebut menunjukkan perlunya penguatan program pemerintah daerah dalam mendukung pencegahan stunting dan kesehatan anak.",
+      "tidak": "Kondisi tersebut menunjukkan program pemerintah di lingkungan tempat tinggal sudah cukup mendukung kebutuhan anak."
+    },
+    "rekomendasi": {
+      "berpengaruh": "Mendorong penyebarluasan informasi mengenai penyuluhan, bantuan gizi, dan layanan kesehatan melalui Posyandu, kelurahan/desa, Puskesmas, atau Dinas Kesehatan.",
+      "tidak": "Mempertahankan keterlibatan aktif masyarakat dalam kegiatan dan pemanfaatan layanan pemerintah yang tersedia."
+    }
+  },
+  "X9": {
+    "name": "Dukungan Keluarga",
+    "berpengaruh": "Dukungan keluarga dan lingkungan membantu Orang Tua dalam merawat Balita. Manfaatkan dukungan keluarga, kader Posyandu, dan TPK (Tim Pendamping Keluarga), serta ikuti kegiatan masyarakat terkait gizi Balita.",
+    "tidak": "Dukungan keluarga dan lingkungan sudah cukup baik dalam membantu perawatan Balita. Pertahankan komunikasi dan kerja sama keluarga dalam memenuhi kebutuhan gizi dan tumbuh kembang Balita.",
+    "implikasi": {
+      "berpengaruh": "Kondisi tersebut menunjukkan perlunya penguatan dukungan keluarga dan lingkungan dalam membantu orang tua merawat anak.",
+      "tidak": "Kondisi tersebut menunjukkan dukungan keluarga dan lingkungan sudah cukup baik dalam membantu perawatan anak."
+    },
+    "rekomendasi": {
+      "berpengaruh": "Mendorong pemanfaatan dukungan keluarga, kader Posyandu, dan Tim Pendamping Keluarga (TPK) serta partisipasi dalam kegiatan masyarakat terkait gizi anak.",
+      "tidak": "Mempertahankan komunikasi dan kerja sama keluarga dalam memenuhi kebutuhan gizi dan tumbuh kembang anak."
+    }
+  },
+  "X10": {
+    "name": "Status Gizi Anak",
+    "berpengaruh": "Status gizi Balita perlu mendapat perhatian lebih. Berikan makanan bergizi seimbang, rutin menimbang dan mengukur tinggi badan di Posyandu atau Puskesmas, serta konsultasikan dengan tenaga kesehatan jika diperlukan.",
+    "tidak": "Status gizi Balita sudah baik dan pertumbuhannya berjalan dengan baik. Pertahankan dengan pola makan bergizi seimbang, pemantauan rutin di Posyandu, dan aktivitas fisik yang cukup.",
+    "implikasi": {
+      "berpengaruh": "Kondisi tersebut menunjukkan perlunya perhatian terhadap pemenuhan kebutuhan gizi dan pemantauan pertumbuhan anak.",
+      "tidak": "Kondisi tersebut menunjukkan status gizi dan pertumbuhan anak sudah berjalan dengan baik."
+    },
+    "rekomendasi": {
+      "berpengaruh": "Mendorong pemantauan pertumbuhan secara berkala melalui Posyandu atau Puskesmas serta meningkatkan edukasi mengenai pemenuhan gizi anak sesuai kebutuhan.",
+      "tidak": "Mempertahankan pola makan bergizi seimbang, pemantauan rutin di Posyandu, serta aktivitas fisik yang cukup bagi anak."
+    }
+  }
+}

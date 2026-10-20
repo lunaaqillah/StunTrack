@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="id">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Kode Verifikasi Login Admin - StunTrack</title>
+      <style>
+        body {
+          font-family: 'Poppins', Arial, sans-serif;
+          line-height: 1.6;
+          color: #333;
+          max-width: 600px;
+          margin: 0 auto;
+          background-color: #f8f9fa;
+        }
+        .container {
+          background-color: white;
+          padding: 30px;
+          border-radius: 10px;
+          box-shadow: 0 0 20px rgba(0,0,0,0.1);
+          margin: 20px;
+        }
+        .logo img {
+          width: auto !important;
+          height: 75px !important;
+        }
+        .header {
+          text-align: center;
+          border-bottom: 3px solid #2d465e;
+          padding-bottom: 20px;
+          margin-bottom: 30px;
+        }
+        .content {
+          margin: 20px 0;
+        }
+        .greeting {
+          font-size: 18px;
+          font-weight: bold;
+          color: #111A2B;
+          margin-bottom: 20px;
+        }
+        .code {
+          display: inline-block;
+          letter-spacing: 8px;
+          font-size: 32px;
+          font-weight: 700;
+          color: #212E48;
+          background-color: #f2f2f2;
+          padding: 15px 25px;
+          border-radius: 8px;
+          margin: 20px 0;
+        }
+        .signature {
+          margin-top: 30px;
+          padding-top: 20px;
+          border-top: 1px solid #eee;
+          text-align: center;
+          color: #666;
+        }
+        .signature strong {
+          color: #111A2B;
+        }
+        .no-reply {
+          text-align: center;
+          font-style: italic;
+          color: #999;
+          margin-top: 10px;
+          font-size: 14px;
+        }
+      </style>
+    </head>
+    <body>
+
+      <!-- SECTION: Email Content -->
+      <div class="container">
+        <div class="header">
+          <div class="logo">
+            <img src="cid:logo_cid" alt="StunTrack Logo" style="width: auto !important; height: 75px !important;" />
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="greeting">Verifikasi Login Admin StunTrack</div>
+          <p>Gunakan kode berikut untuk menyelesaikan proses login ke dashboard admin StunTrack:</p>
+          <div style="text-align:center;"><span class="code">$code</span></div>
+          <p>Kode ini berlaku selama $otp_ttl_minutes menit. Jangan bagikan kode ini kepada siapa pun.</p>
+          <p><em>Jika Anda tidak merasa melakukan permintaan login ini, abaikan email ini dan segera
+          periksa keamanan akun admin Anda.</em></p>
+        </div>
+
+        <div class="signature">
+          <p><strong>Tim StunTrack</strong><br/>
+            stuntingtracking@gmail.com<br/>
+            <em>Pesan ini dikirim otomatis dari website StunTrack</em><br/>
+            <em>*Mohon untuk tidak membalas email ini secara langsung</em><br/>
+          </p>
+        </div>
+
+        <div class="no-reply">Terima kasih.</div>
+      </div>
+
+      <!-- /SECTION: Email Content -->
+
+    </body>
+    </html>

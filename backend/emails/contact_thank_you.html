@@ -1,0 +1,131 @@
+<html>
+
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      width: auto !important;
+      height: 75px !important;
+      text-align: center !important;
+    }
+
+    .divider {
+      border: none;
+      height: 2px;
+      background-color: #111A2B;
+      margin: 30px 0;
+    }
+
+    .greeting {
+      font-size: 18px;
+      font-weight: bold;
+      color: #111A2B;
+      margin-bottom: 20px;
+    }
+
+    .message {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+
+    .details {
+      background-color: #f8f9fa;
+      padding: 10px 20px 20px 20px;
+      border-radius: 8px;
+      margin: 15px 0;
+    }
+
+    .details h4 {
+      color: #212529;
+      margin-bottom: 15px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .detail-item {
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .detail-label {
+      font-weight: 600;
+      color: #212529;
+      display: inline-block;
+      min-width: 70px;
+    }
+
+    .signature {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+      text-align: center;
+      color: #666;
+    }
+
+    .signature strong {
+      color: #111A2B;
+    }
+
+    .no-reply {
+      text-align: center;
+      font-style: italic;
+      color: #999;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SECTION: Email Content -->
+  <div class="container">
+    <div class="logo">
+      <img src="cid:logo_cid" alt="StunTrack Logo" style="width: auto !important; height: 75px !important;">
+    </div>
+    <hr class="divider">
+    <div class="greeting">Yth. $name,</div>
+    <div class="message">
+      Pesan Anda telah kami terima dan sedang kami tinjau. Tim kami akan segera menindaklanjuti dan menghubungi
+      Anda kembali secepatnya untuk memberikan respon atau bantuan yang Anda butuhkan. Kami menghargai kesabaran
+      Anda dan berterima kasih atas kepercayaan yang telah diberikan kepada StunTrack.
+    </div>
+    <div class="details">
+      <h4 style="margin-top: -20px !important;">Detail Pesan Anda:</h4>
+      <div class="detail-item">
+        <span class="detail-label">Subjek</span> $subject
+      </div>
+      <div class="detail-item">
+        <span class="detail-label">Pesan</span> $message
+      </div>
+    </div>
+    <div class="signature">
+      <p>Salam hormat,<br>
+        <strong>Tim StunTrack</strong><br>
+        stuntingtracking@gmail.com<br>
+        <em>Pesan ini dikirim otomatis dari website StunTrack</em><br>
+        <em>*Mohon untuk tidak membalas email ini secara langsung</em><br>
+    </div>
+  </div>
+
+  <!-- /SECTION: Email Content -->
+
+</body>
+
+</html>

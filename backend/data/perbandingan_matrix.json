@@ -1,0 +1,62 @@
+{
+    "Normal": {
+        "rendah": {
+            "judul": "Perlu Dipertahankan",
+            "deskripsi": "Tinggi badan sesuai dengan standar WHO dan faktor risiko stunting berdasarkan kuesioner tergolong rendah. Pertahankan kondisi yang sudah baik dan lakukan pemantauan pertumbuhan secara rutin.",
+            "level": "aman",
+            "is_selaras": true
+        },
+        "sedang": {
+            "judul": "Perlu Dipantau",
+            "deskripsi": "Tinggi badan masih sesuai dengan standar WHO, tetapi terdapat beberapa faktor risiko stunting yang perlu diperhatikan. Lakukan pemantauan secara berkala dan upayakan perbaikan pada faktor risiko stunting yang ditemukan.",
+            "level": "pantau",
+            "is_selaras": true
+        },
+        "tinggi": {
+            "judul": "Perlu Diwaspadai",
+            "deskripsi": "Tinggi badan masih sesuai dengan standar WHO, tetapi faktor risiko stunting berdasarkan kuesioner tergolong tinggi. Kondisi ini perlu mendapat perhatian agar faktor risiko stunting dapat segera dikendalikan dan tidak berdampak pada pertumbuhan anak.",
+            "level": "waspada",
+            "is_selaras": false
+        }
+    },
+    "Pendek": {
+        "rendah": {
+            "judul": "Perlu Ditelusuri",
+            "deskripsi": "Tinggi badan menunjukkan kondisi pendek berdasarkan standar WHO, sementara faktor risiko stunting berdasarkan kuesioner tergolong rendah. Kondisi ini perlu ditelusuri lebih lanjut untuk mengetahui kemungkinan faktor lain yang memengaruhi pertumbuhan anak.",
+            "level": "telusuri",
+            "is_selaras": false
+        },
+        "sedang": {
+            "judul": "Perlu Penanganan Bertahap",
+            "deskripsi": "Tinggi badan menunjukkan kondisi pendek berdasarkan standar WHO dan terdapat beberapa faktor risiko stunting yang perlu diperhatikan. Lakukan perbaikan secara bertahap pada faktor risiko stunting yang ditemukan disertai pemantauan pertumbuhan secara berkala.",
+            "level": "perhatian",
+            "is_selaras": true
+        },
+        "tinggi": {
+            "judul": "Perlu Penanganan Intensif",
+            "deskripsi": "Tinggi badan menunjukkan kondisi pendek berdasarkan standar WHO dan faktor risiko stunting berdasarkan kuesioner tergolong tinggi. Diperlukan perhatian dan penanganan yang lebih intensif terhadap faktor risiko stunting serta pemantauan pertumbuhan secara berkala bersama tenaga kesehatan.",
+            "level": "darurat",
+            "is_selaras": true
+        }
+    },
+    "Sangat Pendek": {
+        "rendah": {
+            "judul": "Perlu Ditelusuri",
+            "deskripsi": "Tinggi badan menunjukkan kondisi sangat pendek berdasarkan standar WHO, sementara faktor risiko stunting berdasarkan kuesioner tergolong rendah. Kondisi ini perlu ditelusuri lebih lanjut untuk mengetahui kemungkinan faktor lain yang memengaruhi pertumbuhan anak.",
+            "level": "telusuri",
+            "is_selaras": false
+        },
+        "sedang": {
+            "judul": "Perlu Penanganan Bertahap",
+            "deskripsi": "Tinggi badan menunjukkan kondisi sangat pendek berdasarkan standar WHO dan terdapat beberapa faktor risiko stunting yang perlu diperhatikan. Lakukan perbaikan secara bertahap pada faktor risiko stunting yang ditemukan disertai pemantauan pertumbuhan secara berkala.",
+            "level": "perhatian",
+            "is_selaras": true
+        },
+        "tinggi": {
+            "judul": "Perlu Penanganan Intensif",
+            "deskripsi": "Tinggi badan menunjukkan kondisi sangat pendek berdasarkan standar WHO dan faktor risiko stunting berdasarkan kuesioner tergolong tinggi. Diperlukan perhatian dan penanganan yang lebih intensif terhadap faktor risiko stunting serta pemantauan pertumbuhan secara berkala bersama tenaga kesehatan.",
+            "level": "darurat",
+            "is_selaras": true
+        }
+    }
+}

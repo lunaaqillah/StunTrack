@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Login Admin - StunTrack</title>
+  <link href="assets/img/LOGO-2.png" rel="icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+<body class="page-admin-login">
+
+  <div class="login-wrapper">
+    <div class="login-card">
+      <div class="login-logo">
+        <img src="assets/img/LOGO.png" alt="StunTrack">
+      </div>
+      <hr class="logo-divider">
+      <div class="login-title">Login Admin</div>
+      <div class="login-subtitle">Masuk untuk mengakses dashboard admin</div>
+
+      <div class="alert alert-danger alert-box" id="errorBox" role="alert"></div>
+      <div class="alert alert-success alert-box" id="successBox" role="alert"></div>
+
+      <!-- SECTION: Login -->
+      <div class="step active" id="step1">
+        <form id="loginForm">
+          <div class="mb-3">
+            <label class="form-label" for="email">Email Admin</label>
+            <input type="email" class="form-control" id="email" required autocomplete="username">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="password">Password</label>
+            <div class="password-wrapper">
+              <input type="password" class="form-control" id="password" required autocomplete="current-password">
+              <button type="button" class="password-toggle" id="togglePassword" tabindex="-1" aria-label="Lihat password">
+                <i class="bi bi-eye" id="togglePasswordIcon"></i>
+              </button>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-login" id="loginBtn">Masuk</button>
+        </form>
+      </div>
+
+      <!-- /SECTION: Fungsi 1: Login -->
+
+      <!-- SECTION: Verifikasi OTP -->
+      <div class="step" id="step2">
+        <p class="otp-note">
+          Kami telah mengirimkan kode verifikasi 6 digit ke <span class="masked-email" id="maskedEmail"></span>.
+          Masukkan kode tersebut untuk melanjutkan.
+        </p>
+        <form id="otpForm">
+          <div class="mb-3">
+            <input type="text" class="form-control otp-input" id="otpCode" maxlength="6" inputmode="numeric" pattern="[0-9]*" required placeholder="------">
+          </div>
+          <button type="submit" class="btn btn-login" id="verifyBtn">Verifikasi &amp; Masuk</button>
+        </form>
+      </div>
+
+      <hr class="divider">
+      <div class="back-link">
+        <a href="/"><i class="bi bi-arrow-left"> </i>Kembali ke Beranda</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- /SECTION: Fungsi 2: Verifikasi OTP -->
+  <!-- SECTION: Scripts -->
+  <script src="assets/js/pages/admin-login.js"></script>
+  <!-- /SECTION: Scripts -->
+</body>
+</html>

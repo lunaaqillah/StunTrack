@@ -1,0 +1,37 @@
+{
+  "statuses": [
+    {
+      "value": "Normal",
+      "label": "Normal"
+    },
+    {
+      "value": "Pendek",
+      "label": "Pendek"
+    },
+    {
+      "value": "Sangat Pendek",
+      "label": "Sangat Pendek"
+    }
+  ],
+  "zscore_rules": [
+    {
+      "min": null,
+      "max": -3,
+      "value": "Sangat Pendek",
+      "max_inclusive": false
+    },
+    {
+      "min": -3,
+      "max": -2,
+      "value": "Pendek",
+      "min_inclusive": true,
+      "max_inclusive": false
+    },
+    {
+      "min": -2,
+      "max": null,
+      "value": "Normal",
+      "min_inclusive": true
+    }
+  ]
+}

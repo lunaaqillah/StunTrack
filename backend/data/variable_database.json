@@ -1,0 +1,633 @@
+{
+  "variables": [
+    {
+      "id_variabel": "X1",
+      "keterangan": "Pengetahuan Ibu"
+    },
+    {
+      "id_variabel": "X2",
+      "keterangan": "Tingkat Ekonomi"
+    },
+    {
+      "id_variabel": "X3",
+      "keterangan": "Pola Asuh"
+    },
+    {
+      "id_variabel": "X4",
+      "keterangan": "Layanan Kesehatan"
+    },
+    {
+      "id_variabel": "X5",
+      "keterangan": "Pola Makan Anak"
+    },
+    {
+      "id_variabel": "X6",
+      "keterangan": "Status Gizi Orang Tua"
+    },
+    {
+      "id_variabel": "X7",
+      "keterangan": "Lingkungan"
+    },
+    {
+      "id_variabel": "X8",
+      "keterangan": "Peran Pemerintah Daerah"
+    },
+    {
+      "id_variabel": "X9",
+      "keterangan": "Dukungan Keluarga"
+    },
+    {
+      "id_variabel": "X10",
+      "keterangan": "Status Gizi Anak"
+    }
+  ],
+  "indicators": [
+    {
+      "id_indikator": "X1.1",
+      "id_variabel": "X1",
+      "keterangan": "Istilah Stunting"
+    },
+    {
+      "id_indikator": "X1.2",
+      "id_variabel": "X1",
+      "keterangan": "Pengetahuan Gizi"
+    },
+    {
+      "id_indikator": "X2.1",
+      "id_variabel": "X2",
+      "keterangan": "Pendapatan Keluarga"
+    },
+    {
+      "id_indikator": "X2.2",
+      "id_variabel": "X2",
+      "keterangan": "Pengeluaran Keluarga"
+    },
+    {
+      "id_indikator": "X3.1",
+      "id_variabel": "X3",
+      "keterangan": "Demokratis"
+    },
+    {
+      "id_indikator": "X3.2",
+      "id_variabel": "X3",
+      "keterangan": "Sistem Otoriter"
+    },
+    {
+      "id_indikator": "X4.1",
+      "id_variabel": "X4",
+      "keterangan": "Bukti Fisik"
+    },
+    {
+      "id_indikator": "X4.2",
+      "id_variabel": "X4",
+      "keterangan": "Reliabilitas"
+    },
+    {
+      "id_indikator": "X4.3",
+      "id_variabel": "X4",
+      "keterangan": "Daya Tanggap"
+    },
+    {
+      "id_indikator": "X4.4",
+      "id_variabel": "X4",
+      "keterangan": "Jaminan"
+    },
+    {
+      "id_indikator": "X5.1",
+      "id_variabel": "X5",
+      "keterangan": "Penyusunan Menu"
+    },
+    {
+      "id_indikator": "X5.2",
+      "id_variabel": "X5",
+      "keterangan": "Pengolahan Makanan"
+    },
+    {
+      "id_indikator": "X5.3",
+      "id_variabel": "X5",
+      "keterangan": "Cara Pemberian Makanan"
+    },
+    {
+      "id_indikator": "X6.1",
+      "id_variabel": "X6",
+      "keterangan": "Jenis Makanan"
+    },
+    {
+      "id_indikator": "X6.2",
+      "id_variabel": "X6",
+      "keterangan": "Jumlah Makanan"
+    },
+    {
+      "id_indikator": "X7.1",
+      "id_variabel": "X7",
+      "keterangan": "Pemanfaatan Air Bersih"
+    },
+    {
+      "id_indikator": "X7.2",
+      "id_variabel": "X7",
+      "keterangan": "Kepemilikan Jamban"
+    },
+    {
+      "id_indikator": "X7.3",
+      "id_variabel": "X7",
+      "keterangan": "Kebiasaan Mencuci Tangan"
+    },
+    {
+      "id_indikator": "X8.1",
+      "id_variabel": "X8",
+      "keterangan": "Pembinaan"
+    },
+    {
+      "id_indikator": "X8.2",
+      "id_variabel": "X8",
+      "keterangan": "Pencegahan"
+    },
+    {
+      "id_indikator": "X9.1",
+      "id_variabel": "X9",
+      "keterangan": "Dukungan Emosional"
+    },
+    {
+      "id_indikator": "X9.2",
+      "id_variabel": "X9",
+      "keterangan": "Dukungan Informasi"
+    },
+    {
+      "id_indikator": "X9.3",
+      "id_variabel": "X9",
+      "keterangan": "Dukungan Material"
+    },
+    {
+      "id_indikator": "X10.1",
+      "id_variabel": "X10",
+      "keterangan": "Jenis Makanan"
+    },
+    {
+      "id_indikator": "X10.2",
+      "id_variabel": "X10",
+      "keterangan": "Jumlah Makanan"
+    },
+    {
+      "id_indikator": "Y.1",
+      "id_variabel": "Y",
+      "keterangan": "Pertumbuhan Anak"
+    },
+    {
+      "id_indikator": "Y.2",
+      "id_variabel": "Y",
+      "keterangan": "Kondisi Fisik"
+    }
+  ],
+  "items": [
+    {
+      "id_variabel": "X1",
+      "id_indikator": "X1.1",
+      "id_item": "X1.1.1",
+      "pertanyaan": "Apakah stunting merupakan gangguan pertumbuhan pada anak (tidak normal)?"
+    },
+    {
+      "id_variabel": "X1",
+      "id_indikator": "X1.1",
+      "id_item": "X1.1.2",
+      "pertanyaan": "Apakah stunting diakibatkan lingkungan di sekitar rumah yang kurang sehat?"
+    },
+    {
+      "id_variabel": "X1",
+      "id_indikator": "X1.2",
+      "id_item": "X1.2.1",
+      "pertanyaan": "Apakah kecukupan gizi ibu ketika hamil berpengaruh terhadap tumbuh kembang anak?"
+    },
+    {
+      "id_variabel": "X1",
+      "id_indikator": "X1.2",
+      "id_item": "X1.2.2",
+      "pertanyaan": "Apakah stunting diakibatkan oleh kekurangan gizi dalam waktu lama, yaitu terjadi sejak janin dalam kandungan sampai anak umur 3 tahun?"
+    },
+    {
+      "id_variabel": "X2",
+      "id_indikator": "X2.1",
+      "id_item": "X2.1.1",
+      "pertanyaan": "Apakah keluarga dapat memenuhi kebutuhan makan anak dengan baik?"
+    },
+    {
+      "id_variabel": "X2",
+      "id_indikator": "X2.1",
+      "id_item": "X2.1.2",
+      "pertanyaan": "Apakah penghasilan keluarga mencukupi kebutuhan sehari-hari seluruh anggota keluarga?"
+    },
+    {
+      "id_variabel": "X2",
+      "id_indikator": "X2.2",
+      "id_item": "X2.2.1",
+      "pertanyaan": "Apakah pengeluaran keluarga tidak lebih besar dari penghasilan?"
+    },
+    {
+      "id_variabel": "X2",
+      "id_indikator": "X2.2",
+      "id_item": "X2.2.2",
+      "pertanyaan": "Apakah keluarga berbelanja sesuai kebutuhan pokok keluarga?"
+    },
+    {
+      "id_variabel": "X2",
+      "id_indikator": "X2.2",
+      "id_item": "X2.2.3",
+      "pertanyaan": "Apakah harga kebutuhan pokok di pasar sesuai dengan kemampuan ekonomi keluarga?"
+    },
+    {
+      "id_variabel": "X3",
+      "id_indikator": "X3.1",
+      "id_item": "X3.1.1",
+      "pertanyaan": "Apakah orang tua merayu anaknya jika tidak mau makan?"
+    },
+    {
+      "id_variabel": "X3",
+      "id_indikator": "X3.1",
+      "id_item": "X3.1.2",
+      "pertanyaan": "Apakah orang tua selalu menemani anaknya saat makan?"
+    },
+    {
+      "id_variabel": "X3",
+      "id_indikator": "X3.1",
+      "id_item": "X3.1.3",
+      "pertanyaan": "Apakah orang tua memperhatikan porsi makan anaknya?"
+    },
+    {
+      "id_variabel": "X3",
+      "id_indikator": "X3.2",
+      "id_item": "X3.2.1",
+      "pertanyaan": "Apakah orang tua menetapkan aturan yang tegas agar anaknya tidak jajan sembarangan di luar?"
+    },
+    {
+      "id_variabel": "X3",
+      "id_indikator": "X3.2",
+      "id_item": "X3.2.2",
+      "pertanyaan": "Apakah orang tua mengingatkan dengan tegas saat anaknya makan sambil bermain?"
+    },
+    {
+      "id_variabel": "X3",
+      "id_indikator": "X3.2",
+      "id_item": "X3.2.3",
+      "pertanyaan": "Apakah orang tua tetap bersikeras agar anaknya menghabiskan makanan berserat?"
+    },
+    {
+      "id_variabel": "X4",
+      "id_indikator": "X4.1",
+      "id_item": "X4.1.1",
+      "pertanyaan": "Apakah sarana seperti ruang tunggu pada layanan kesehatan sudah baik?"
+    },
+    {
+      "id_variabel": "X4",
+      "id_indikator": "X4.1",
+      "id_item": "X4.1.2",
+      "pertanyaan": "Apakah peralatan yang dimiliki layanan kesehatan (puskesmas pembantu) sudah lengkap?"
+    },
+    {
+      "id_variabel": "X4",
+      "id_indikator": "X4.1",
+      "id_item": "X4.1.3",
+      "pertanyaan": "Apakah kondisi layanan kesehatan (puskesmas pembantu) bersih?"
+    },
+    {
+      "id_variabel": "X4",
+      "id_indikator": "X4.2",
+      "id_item": "X4.2.1",
+      "pertanyaan": "Apakah layanan kesehatan (puskesmas pembantu) menjalankan prosedur dengan baik?"
+    },
+    {
+      "id_variabel": "X4",
+      "id_indikator": "X4.2",
+      "id_item": "X4.2.2",
+      "pertanyaan": "Apakah petugas layanan kesehatan dari awal hingga akhir menunjukkan kemampuan dengan baik?"
+    },
+    {
+      "id_variabel": "X4",
+      "id_indikator": "X4.2",
+      "id_item": "X4.2.3",
+      "pertanyaan": "Apakah ketepatan waktu pelayanan sudah sesuai dengan jadwal?"
+    },
+    {
+      "id_variabel": "X4",
+      "id_indikator": "X4.3",
+      "id_item": "X4.3.1",
+      "pertanyaan": "Apakah petugas layanan kesehatan memberikan layanan dengan cepat?"
+    },
+    {
+      "id_variabel": "X4",
+      "id_indikator": "X4.3",
+      "id_item": "X4.3.2",
+      "pertanyaan": "Apakah petugas medis dalam melayani pasien tidak berbelit-belit?"
+    },
+    {
+      "id_variabel": "X4",
+      "id_indikator": "X4.3",
+      "id_item": "X4.3.3",
+      "pertanyaan": "Apakah petugas medis sangat mampu menangani penyakit yang diderita pasien?"
+    },
+    {
+      "id_variabel": "X4",
+      "id_indikator": "X4.4",
+      "id_item": "X4.4.1",
+      "pertanyaan": "Apakah tidak merasa waswas berobat di layanan kesehatan?"
+    },
+    {
+      "id_variabel": "X4",
+      "id_indikator": "X4.4",
+      "id_item": "X4.4.2",
+      "pertanyaan": "Apakah merasa pelayanan dalam merawat pasien sudah memenuhi standar?"
+    },
+    {
+      "id_variabel": "X4",
+      "id_indikator": "X4.4",
+      "id_item": "X4.4.3",
+      "pertanyaan": "Apakah merasa aman berada di lingkungan layanan kesehatan?"
+    },
+    {
+      "id_variabel": "X5",
+      "id_indikator": "X5.1",
+      "id_item": "X5.1.1",
+      "pertanyaan": "Apakah penyusunan menu untuk anak berdasarkan pada makanan yang disukai anak?"
+    },
+    {
+      "id_variabel": "X5",
+      "id_indikator": "X5.1",
+      "id_item": "X5.1.2",
+      "pertanyaan": "Apakah orang tua selalu memperhatikan komposisi zat gizi dalam menyusun menu untuk anak?"
+    },
+    {
+      "id_variabel": "X5",
+      "id_indikator": "X5.1",
+      "id_item": "X5.1.3",
+      "pertanyaan": "Apakah orang tua hampir selalu mengikuti standar kesehatan dalam menyusun menu makan untuk anak?"
+    },
+    {
+      "id_variabel": "X5",
+      "id_indikator": "X5.2",
+      "id_item": "X5.2.1",
+      "pertanyaan": "Apakah orang tua menggunakan bahan makanan yang masih segar dalam mengolah makanan untuk anak?"
+    },
+    {
+      "id_variabel": "X5",
+      "id_indikator": "X5.2",
+      "id_item": "X5.2.2",
+      "pertanyaan": "Apakah cara pengolahan makanan untuk anak dilakukan secara bervariasi, seperti dikukus?"
+    },
+    {
+      "id_variabel": "X5",
+      "id_indikator": "X5.2",
+      "id_item": "X5.2.3",
+      "pertanyaan": "Apakah orang tua mencuci sayuran terlebih dahulu sebelum dipotong saat mengolah makanan untuk anak?"
+    },
+    {
+      "id_variabel": "X5",
+      "id_indikator": "X5.3",
+      "id_item": "X5.3.1",
+      "pertanyaan": "Apakah pola makan anak dalam sehari terdiri dari 3 kali makan utama serta 2 kali makanan selingan?"
+    },
+    {
+      "id_variabel": "X5",
+      "id_indikator": "X5.3",
+      "id_item": "X5.3.2",
+      "pertanyaan": "Apakah pemberian makanan kepada anak teratur sesuai jadwal makan?"
+    },
+    {
+      "id_variabel": "X5",
+      "id_indikator": "X5.3",
+      "id_item": "X5.3.3",
+      "pertanyaan": "Apakah orang tua memberikan makanan yang bernilai gizi baik kepada anak meskipun orang tua tidak menyukainya?"
+    },
+    {
+      "id_variabel": "X6",
+      "id_indikator": "X6.1",
+      "id_item": "X6.1.1",
+      "pertanyaan": "Apakah orang tua setiap hari mengonsumsi menu yang seimbang meskipun tidak selalu sesuai kesukaan?"
+    },
+    {
+      "id_variabel": "X6",
+      "id_indikator": "X6.1",
+      "id_item": "X6.1.2",
+      "pertanyaan": "Apakah menu makanan orang tua setiap hari memiliki kandungan gizi yang baik?"
+    },
+    {
+      "id_variabel": "X6",
+      "id_indikator": "X6.1",
+      "id_item": "X6.1.3",
+      "pertanyaan": "Apakah orang tua rutin mengonsumsi makanan yang mengandung vitamin?"
+    },
+    {
+      "id_variabel": "X6",
+      "id_indikator": "X6.2",
+      "id_item": "X6.2.1",
+      "pertanyaan": "Apakah orang tua makan nasi 3 kali sehari, dengan porsi sekitar 1 piring setiap kali makan?"
+    },
+    {
+      "id_variabel": "X6",
+      "id_indikator": "X6.2",
+      "id_item": "X6.2.2",
+      "pertanyaan": "Apakah orang tua mengonsumsi lauk pauk sebanyak 2-3 potong setiap hari?"
+    },
+    {
+      "id_variabel": "X6",
+      "id_indikator": "X6.2",
+      "id_item": "X6.2.3",
+      "pertanyaan": "Apakah orang tua menghabiskan semua makanan yang ada di piring setiap kali makan?"
+    },
+    {
+      "id_variabel": "X7",
+      "id_indikator": "X7.1",
+      "id_item": "X7.1.1",
+      "pertanyaan": "Apakah keluarga memiliki sarana air bersih?"
+    },
+    {
+      "id_variabel": "X7",
+      "id_indikator": "X7.1",
+      "id_item": "X7.1.2",
+      "pertanyaan": "Apakah keluarga menggunakan air bersih untuk memasak?"
+    },
+    {
+      "id_variabel": "X7",
+      "id_indikator": "X7.1",
+      "id_item": "X7.1.3",
+      "pertanyaan": "Apakah keluarga meminum air yang sudah dimasak?"
+    },
+    {
+      "id_variabel": "X7",
+      "id_indikator": "X7.2",
+      "id_item": "X7.2.1",
+      "pertanyaan": "Apakah rumah memiliki jamban keluarga?"
+    },
+    {
+      "id_variabel": "X7",
+      "id_indikator": "X7.2",
+      "id_item": "X7.2.2",
+      "pertanyaan": "Apakah jamban hampir selalu dibersihkan 2-3 kali dalam seminggu?"
+    },
+    {
+      "id_variabel": "X7",
+      "id_indikator": "X7.2",
+      "id_item": "X7.2.3",
+      "pertanyaan": "Apakah jarak antara septik tank dengan kamar tidur lebih dari 10 meter?"
+    },
+    {
+      "id_variabel": "X7",
+      "id_indikator": "X7.3",
+      "id_item": "X7.3.1",
+      "pertanyaan": "Apakah orang tua hampir selalu mencuci tangan menggunakan air mengalir?"
+    },
+    {
+      "id_variabel": "X7",
+      "id_indikator": "X7.3",
+      "id_item": "X7.3.2",
+      "pertanyaan": "Apakah orang tua hampir selalu mencuci tangan menggunakan sabun sebelum makan?"
+    },
+    {
+      "id_variabel": "X7",
+      "id_indikator": "X7.3",
+      "id_item": "X7.3.3",
+      "pertanyaan": "Apakah orang tua membiasakan anak mencuci tangan dengan air mengalir setelah bermain?"
+    },
+    {
+      "id_variabel": "X8",
+      "id_indikator": "X8.1",
+      "id_item": "X8.1.1",
+      "pertanyaan": "Apakah pemerintah memberikan sosialisasi kepada masyarakat terkait program peningkatan gizi?"
+    },
+    {
+      "id_variabel": "X8",
+      "id_indikator": "X8.1",
+      "id_item": "X8.1.2",
+      "pertanyaan": "Apakah pemerintah memberikan sosialisasi tentang pendidikan pengasuhan kepada orang tua?"
+    },
+    {
+      "id_variabel": "X8",
+      "id_indikator": "X8.1",
+      "id_item": "X8.1.3",
+      "pertanyaan": "Apakah pemerintah memberikan edukasi mengenai kesehatan reproduksi kepada remaja?"
+    },
+    {
+      "id_variabel": "X8",
+      "id_indikator": "X8.2",
+      "id_item": "X8.2.1",
+      "pertanyaan": "Apakah pemerintah aktif melaksanakan program peningkatan gizi kepada masyarakat?"
+    },
+    {
+      "id_variabel": "X8",
+      "id_indikator": "X8.2",
+      "id_item": "X8.2.2",
+      "pertanyaan": "Apakah pemerintah aktif membangun sanitasi air yang berkualitas?"
+    },
+    {
+      "id_variabel": "X8",
+      "id_indikator": "X8.2",
+      "id_item": "X8.2.3",
+      "pertanyaan": "Apakah pemerintah aktif membangun infrastruktur penyediaan air minum?"
+    },
+    {
+      "id_variabel": "X9",
+      "id_indikator": "X9.1",
+      "id_item": "X9.1.1",
+      "pertanyaan": "Apakah ibu memperoleh dukungan keluarga untuk memeriksa status tumbuh kembang anak?"
+    },
+    {
+      "id_variabel": "X9",
+      "id_indikator": "X9.1",
+      "id_item": "X9.1.2",
+      "pertanyaan": "Apakah keluarga mendampingi ibu dalam merawat anak balita?"
+    },
+    {
+      "id_variabel": "X9",
+      "id_indikator": "X9.1",
+      "id_item": "X9.1.3",
+      "pertanyaan": "Apakah keluarga mendengarkan keluhan ibu selama merawat anak balita?"
+    },
+    {
+      "id_variabel": "X9",
+      "id_indikator": "X9.1",
+      "id_item": "X9.1.4",
+      "pertanyaan": "Apakah keluarga memotivasi ibu untuk memenuhi kebutuhan nutrisi anak balita setiap hari?"
+    },
+    {
+      "id_variabel": "X9",
+      "id_indikator": "X9.2",
+      "id_item": "X9.2.1",
+      "pertanyaan": "Apakah keluarga dapat menjelaskan aturan dalam merawat anak balita?"
+    },
+    {
+      "id_variabel": "X9",
+      "id_indikator": "X9.2",
+      "id_item": "X9.2.2",
+      "pertanyaan": "Apakah ibu dibimbing menyiapkan jenis makanan yang baik bagi pertumbuhan anak balita?"
+    },
+    {
+      "id_variabel": "X9",
+      "id_indikator": "X9.2",
+      "id_item": "X9.2.3",
+      "pertanyaan": "Apakah keluarga memberitahu ibu mengenai pertumbuhan yang seharusnya dicapai sesuai usia anak?"
+    },
+    {
+      "id_variabel": "X9",
+      "id_indikator": "X9.2",
+      "id_item": "X9.2.4",
+      "pertanyaan": "Apakah keluarga memberitahu ibu mengenai perkembangan yang seharusnya dicapai sesuai usia anak?"
+    },
+    {
+      "id_variabel": "X9",
+      "id_indikator": "X9.3",
+      "id_item": "X9.3.1",
+      "pertanyaan": "Apakah keluarga mengantarkan anak ke fasilitas kesehatan untuk memantau status kesehatannya?"
+    },
+    {
+      "id_variabel": "X9",
+      "id_indikator": "X9.3",
+      "id_item": "X9.3.2",
+      "pertanyaan": "Apakah keluarga menyediakan biaya untuk mengakses pelayanan kesehatan?"
+    },
+    {
+      "id_variabel": "X9",
+      "id_indikator": "X9.3",
+      "id_item": "X9.3.3",
+      "pertanyaan": "Apakah keluarga berperan aktif dalam perawatan anak balita?"
+    },
+    {
+      "id_variabel": "X9",
+      "id_indikator": "X9.3",
+      "id_item": "X9.3.4",
+      "pertanyaan": "Apakah keluarga membantu menyediakan makanan bergizi untuk anak balita?"
+    },
+    {
+      "id_variabel": "X10",
+      "id_indikator": "X10.1",
+      "id_item": "X10.1.1",
+      "pertanyaan": "Apakah anak setiap hari diberi makan dengan menu yang seimbang meskipun tidak selalu sesuai kesukaannya?"
+    },
+    {
+      "id_variabel": "X10",
+      "id_indikator": "X10.1",
+      "id_item": "X10.1.2",
+      "pertanyaan": "Apakah menu makanan anak setiap hari memiliki kandungan gizi yang baik?"
+    },
+    {
+      "id_variabel": "X10",
+      "id_indikator": "X10.1",
+      "id_item": "X10.1.3",
+      "pertanyaan": "Apakah anak rutin diberi makanan yang mengandung vitamin?"
+    },
+    {
+      "id_variabel": "X10",
+      "id_indikator": "X10.2",
+      "id_item": "X10.2.1",
+      "pertanyaan": "Apakah anak diberi makan nasi 3 kali sehari dengan porsi sekitar 1 piring setiap kali makan?"
+    },
+    {
+      "id_variabel": "X10",
+      "id_indikator": "X10.2",
+      "id_item": "X10.2.2",
+      "pertanyaan": "Apakah anak diberi lauk pauk sebanyak 2-3 potong setiap hari?"
+    },
+    {
+      "id_variabel": "X10",
+      "id_indikator": "X10.2",
+      "id_item": "X10.2.3",
+      "pertanyaan": "Apakah anak menghabiskan semua makanan yang ada di piring setiap kali makan?"
+    }
+  ]
+}

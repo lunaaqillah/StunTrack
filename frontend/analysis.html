@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>StunTrack</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- SECTION: Favicons -->
+  <link href="assets/img/LOGO-2.png" rel="icon">
+  <link href="assets/img/LOGO-2.png" rel="apple-touch-icon">
+
+  <!-- /SECTION: Favicons -->
+
+  <!-- SECTION: Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- /SECTION: Fonts -->
+
+  <!-- SECTION: Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- /SECTION: Vendor CSS Files -->
+
+  <!-- SECTION: Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- /SECTION: Main CSS File -->
+
+  <!-- SECTION: Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1/dist/chartjs-plugin-zoom.min.js"></script>
+
+  <!-- /SECTION: Chart.js -->
+
+</head>
+
+<body class="index-page page-analysis">
+
+  <!-- SECTION: Header -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div
+      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
+        <h1 class="sitename">
+          <img src="assets/img/LOGO.png" alt="StunTrack">
+        </h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/#hero" class="active">Home</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#history">History</a></li>
+          <li><a href="/#features">Features</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/#news">News</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a class="btn-getstarted" href="/kuesioner.html">Cegah Stunting</a>
+    </div>
+  </header>
+  <!-- /SECTION: Header -->
+
+  <main class="main">
+
+    <!-- SECTION: Page Title -->
+    <div class="page-title light-background">
+      <div class="container">
+        <h1 class="u-ff-Mont-HeavyDEMO-var-headi">Hasil Analisis Balita</h1>
+        <p class="page-description">
+          Hasil analisis kondisi balita berdasarkan data dan jawaban kuesioner yang telah diisi. Informasi
+          yang tersedia meliputi status pertumbuhan, perkembangan tinggi badan berdasarkan usia, serta
+          faktor-faktor yang memengaruhi risiko stunting. Gunakan hasil analisis ini sebagai acuan untuk
+          memantau pertumbuhan dan mengetahui aspek yang perlu diperhatikan dalam mendukung tumbuh kembang
+          balita.
+        </p>
+      </div>
+    </div>
+    <!-- /SECTION: Page Title -->
+
+    <!-- SECTION: Tab Balita -->
+    <div id="analysis" class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="d-flex justify-content-center u-mt-35px-important">
+        <ul class="nav nav-tabs justify-content-center" id="balitaTabs" role="tablist" data-aos="fade-up"
+          data-aos-delay="100">
+
+        </ul>
+      </div>
+      <div class="tab-content" id="balitaTabContent" data-aos="fade-up" data-aos-delay="200">
+
+      </div>
+    </div>
+    <!-- /SECTION: Fungsi 1: Tab Balita -->
+
+    <template id="tpl-analysis-content">
+      <div class="analysis-content">
+        <!-- SECTION: Ringkasan Status Pertumbuhan -->
+        <section class="status-ringkasan section">
+          <div class="container-fluid container-xl" data-aos="fade-up" data-aos-delay="50">
+            <div class="card shadow-lg border-0 rounded-4 overflow-hidden"
+              style="background: linear-gradient(135deg, #2d465e 0%, #1b2f42 100%);">
+              <div class="row g-3 p-3 p-md-4 align-items-stretch">
+
+                <div class="col-lg-8 d-flex flex-column" style="min-height:0;">
+                  <div class="card shadow border-0 rounded-4 p-4 mb-3" style="background: white;">
+                    <div class="d-flex align-items-center mb-2">
+                      <div class="rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0"
+                        style="width:40px;height:40px;background:#EAA0A3;">
+                        <i class="bi bi-person-vcard-fill" style="color:white;font-size:1.1rem;"></i>
+                      </div>
+                      <h3 class="mb-0 js-nama-balita"
+                        style="color:#2d465e;font-weight:800;font-size:20px;font-family:'Mont-HeavyDEMO', var(--heading-font);">
+                      </h3>
+                    </div>
+                    <hr class="mt-0 mb-3">
+
+                    <div class="row gy-3">
+                      <div class="col-4 d-flex align-items-start">
+                        <i class="bi bi-calendar3 me-2 mt-1" style="color:#EAA0A3; font-size:1.05rem;"></i>
+                        <div>
+                          <div class="text-uppercase text-muted"
+                            style="font-size:11px; font-weight:600; letter-spacing:0.5px;">
+                            Tanggal Pengisian</div>
+                          <div class="js-tgl-pengisian" style="color:#1e3d59; font-size:0.9rem; font-weight:700;"></div>
+                        </div>
+                      </div>
+                      <div class="col-4 d-flex align-items-start">
+                        <i class="bi bi-gender-ambiguous me-2 mt-1" style="color:#EAA0A3; font-size:1.05rem;"></i>
+                        <div>
+                          <div class="text-uppercase text-muted"
+                            style="font-size:11px; font-weight:600; letter-spacing:0.5px;">
+                            Jenis Kelamin</div>
+                          <div class="js-jenis-kelamin" style="color:#1e3d59; font-size:0.9rem; font-weight:700;"></div>
+                        </div>
+                      </div>
+                      <div class="col-4 d-flex align-items-start">
+                        <i class="bi bi-rulers me-2 mt-1" style="color:#EAA0A3; font-size:1.05rem;"></i>
+                        <div>
+                          <div class="text-uppercase text-muted"
+                            style="font-size:11px; font-weight:600; letter-spacing:0.5px;">
+                            Tinggi Badan</div>
+                          <div class="js-tinggi-badan" style="color:#1e3d59; font-size:0.9rem; font-weight:700;"></div>
+                        </div>
+                      </div>
+                      <div class="col-4 d-flex align-items-start">
+                        <i class="bi bi-cake2-fill me-2 mt-1" style="color:#EAA0A3; font-size:1.05rem;"></i>
+                        <div>
+                          <div class="text-uppercase text-muted"
+                            style="font-size:11px; font-weight:600; letter-spacing:0.5px;">
+                            Tanggal Lahir</div>
+                          <div class="js-tgl-lahir" style="color:#1e3d59; font-size:0.9rem; font-weight:700;"></div>
+                        </div>
+                      </div>
+                      <div class="col-4 d-flex align-items-start">
+                        <i class="bi bi-hourglass-split me-2 mt-1" style="color:#EAA0A3; font-size:1.05rem;"></i>
+                        <div>
+                          <div class="text-uppercase text-muted"
+                            style="font-size:11px; font-weight:600; letter-spacing:0.5px;">
+                            Umur</div>
+                          <div class="js-umur" style="color:#1e3d59; font-size:0.9rem; font-weight:700;"></div>
+                        </div>
+                      </div>
+                      <div class="col-4 d-flex align-items-start">
+                        <i class="bi bi-speedometer2 me-2 mt-1" style="color:#EAA0A3; font-size:1.05rem;"></i>
+                        <div>
+                          <div class="text-uppercase text-muted"
+                            style="font-size:11px; font-weight:600; letter-spacing:0.5px;">
+                            Berat Badan</div>
+                          <div class="js-berat-badan" style="color:#1e3d59; font-size:0.9rem; font-weight:700;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card shadow border-0 rounded-4 p-4 flex-grow-1 d-flex flex-column"
+                    style="background: white; min-height:0;">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                      <div class="d-flex align-items-center">
+                        <div class="rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0"
+                          style="width:40px;height:40px;background:#EAA0A3;">
+                          <i class="bi bi-bar-chart-line-fill" style="color:white;font-size:1.1rem;"></i>
+                        </div>
+                        <h5 class="mb-0" style="color:#2d465e;font-weight:700;font-size:20px;">
+                          Grafik Tinggi Badan Berdasarkan Umur</h5>
+                      </div>
+                      <div class="d-flex align-items-center gap-1 flex-shrink-0 ms-2">
+                        <button type="button" class="growth-chart-zoom-btn js-zoom-in" title="Perbesar">
+                          <i class="bi bi-zoom-in" style="font-size:0.8rem;"></i>
+                        </button>
+                        <button type="button" class="growth-chart-zoom-btn js-zoom-out" title="Perkecil">
+                          <i class="bi bi-zoom-out" style="font-size:0.8rem;"></i>
+                        </button>
+                        <button type="button" class="growth-chart-zoom-btn js-zoom-reset" title="Reset Zoom">
+                          <i class="bi bi-arrow-counterclockwise" style="font-size:0.8rem;"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <hr class="mt-0 mb-3">
+                    <div class="mb-3 px-1">
+                      <div class="d-flex align-items-center">
+                        <span style="color:#000000; font-size:0.9rem;">
+                          Tinggi badan balita <strong class="js-diff-label" style="color:#000000;"></strong>
+                        </span>
+                      </div>
+                      <div style="color:#8C97A3; font-size:0.8rem;">
+                        Median WHO usia <span class="js-clamped-age"></span> bulan: <strong class="js-median-who"
+                          style="color:#465a6b;"></strong>, balita:
+                        <strong class="js-actual-height" style="color:#465a6b;"></strong>
+                        <i class="bi bi-question-circle-fill info-tip ms-1" data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Median WHO adalah tinggi rata-rata balita sehat pada usia yang sama, dipakai sebagai acuan standar pertumbuhan."></i>
+                      </div>
+                    </div>
+                    <div class="flex-grow-1" style="position:relative; min-height:220px; height:100%;">
+                      <canvas class="js-growth-canvas"></canvas>
+                    </div>
+                    <div class="js-growth-legend d-flex flex-wrap justify-content-center mt-2 px-1">
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="col-lg-4 d-flex flex-column">
+                  <div
+                    class="card shadow-lg border-0 rounded-4 flex-grow-1 position-relative overflow-hidden d-flex flex-column align-items-center justify-content-center text-center js-status-card"
+                    style="background: #ffffff; padding: 2rem 1.75rem;">
+
+                    <div class="position-absolute"
+                      style="width:220px; height:220px; border-radius:50%; background:var(--accent-color); opacity:0.10; top:-100px; right:-95px;">
+                    </div>
+                    <div class="position-absolute"
+                      style="width:120px; height:120px; border-radius:50%; background:var(--accent-color); opacity:0.14; bottom:-55px; left:-45px;">
+                    </div>
+                    <div class="position-absolute"
+                      style="width:26px; height:26px; border-radius:50%; background:var(--accent-color); opacity:0.18; top:22px; left:18px;">
+                    </div>
+                    <div class="position-absolute"
+                      style="width:14px; height:14px; border-radius:50%; background:var(--accent-color); opacity:0.25; top:70px; right:34px;">
+                    </div>
+                    <div class="position-absolute"
+                      style="width:34px; height:34px; border-radius:50%; background:var(--accent-color); opacity:0.12; bottom:120px; right:14px;">
+                    </div>
+                    <div class="position-absolute"
+                      style="width:10px; height:10px; border-radius:50%; background:var(--accent-color); opacity:0.3; bottom:100px; left:28px;">
+                    </div>
+                    <div class="position-absolute"
+                      style="width:18px; height:18px; border-radius:50%; background:var(--accent-color); opacity:0.15; top:130px; left:8px;">
+                    </div>
+                    <div class="position-relative d-flex flex-column align-items-center">
+                      <div class="position-relative d-flex align-items-center justify-content-center mb-2"
+                        style="width:190px; height:190px;">
+                        <div class="position-absolute"
+                          style="width:100%; height:100%; border-radius:50%; background:#ffffff; border:6px solid var(--accent-color); box-shadow:0 18px 32px -14px var(--glow-color);">
+                        </div>
+                        <img src="" alt="Status Pertumbuhan" class="position-relative js-stunting-img"
+                          style="width:70%; height:auto; display:none;">
+                      </div>
+
+                      <span class="badge rounded-pill position-relative d-inline-flex align-items-center"
+                        style="background:var(--accent-color); color:white; font-size:0.9rem; font-weight:700; letter-spacing:0.8px; padding:0.5em 1.3em; box-shadow:0 6px 14px -6px var(--glow-color); margin-bottom:4px;">
+                        <i class="bi bi-shield-fill-check me-2"></i>STATUS PERTUMBUHAN
+                      </span>
+                      <h3 class="position-relative js-status-text"
+                        style="color:#2d465e; font-weight:800; font-size:34px; line-height:1.15; font-family:'Mont-HeavyDEMO', var(--heading-font); margin:8px 0 2px;">
+                      </h3>
+                      <p class="text-muted mb-0 px-1 position-relative js-status-desc"
+                        style="font-size:0.9rem; max-width:320px; line-height:1.55;"></p>
+                      <div
+                        class="js-status-badges d-flex flex-wrap justify-content-center gap-2 mt-2 position-relative">
+                      </div>
+                    </div>
+
+                    <div
+                      class="position-relative w-100 text-center mt-2 d-flex align-items-center justify-content-center"
+                      style="color:#8C97A3; font-size:0.78rem;">
+                      Yuk, perbarui data tinggi & berat badan balita tiap bulan agar pemantauan
+                      lebih akurat
+                    </div>
+                  </div>
+                  <div class="js-gondok-alert mt-3"></div>
+                  <button type="button"
+                    class="btn w-100 mt-3 d-flex align-items-center justify-content-center gap-2 rounded-4 fw-semibold flex-shrink-0 js-btn-pdf"
+                    style="background:#EAA0A3; color:#ffffff; padding:0.6rem 1rem; font-size:0.85rem; border:none;">
+                    <i class="bi bi-download"></i>Simpan sebagai PDF
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- /SECTION: Fungsi 2: Ringkasan Status Pertumbuhan -->
+
+        <!-- SECTION: Faktor Risiko Stunting -->
+        <section class="faktor-risiko section" style="margin-top: -60px;">
+          <div class="container-fluid container-xl" data-aos="fade-up" data-aos-delay="100">
+            <div class="card shadow-lg border-0 rounded-4 p-0 overflow-hidden">
+              <div class="card-header text-white py-4" style="background-color: #2d465e;">
+                <h4 class="mb-0 fw-bold text-center u-c-white_ff-Mont-HeavyDEMO-var-headi">Prediksi &amp;
+                  Faktor Risiko Stunting pada Balita</h4>
+              </div>
+              <div class="card-body p-4">
+                <div class="js-prediksi-y-content"></div>
+                <p class="text-center mb-4 u-c-var-muted_fs-0-88rem">Berdasarkan hasil pengisian kuesioner, ditemukan
+                  beberapa
+                  faktor yang paling
+                  berkontribusi terhadap peningkatan maupun penurunan risiko stunting pada balita.
+                  Faktor-faktor
+                  tersebut dapat menjadi acuan dalam menentukan aspek yang perlu diprioritaskan untuk
+                  dipertahankan
+                  atau ditingkatkan.</p>
+                <div class="js-faktor-risiko-content">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- /SECTION: Fungsi 3: Faktor Risiko Stunting -->
+
+        <!-- SECTION: Perbandingan Status Pertumbuhan & Prediksi Risiko -->
+        <section class="perbandingan-risiko section" style="margin-top: -60px;">
+          <div class="container-fluid container-xl" data-aos="fade-up" data-aos-delay="120">
+            <div class="card shadow-lg border-0 rounded-4 p-0 overflow-hidden">
+              <div class="card-header text-white py-4" style="background-color: #2d465e;">
+                <h4 class="mb-0 fw-bold text-center u-c-white_ff-Mont-HeavyDEMO-var-headi">Perbandingan Status Pertumbuhan &amp; Prediksi Risiko</h4>
+              </div>
+              <div class="card-body p-4">
+                <p class="mb-3" style="color:#465a6b;font-size:0.88rem;line-height:1.75;text-align:center;">
+                  Status pertumbuhan menunjukkan kondisi tinggi badan balita berdasarkan standar WHO, sedangkan
+                  kategori risiko menunjukkan tingkat faktor risiko stunting dari 10 faktor kuesioner.
+                  Perbandingan keduanya membantu memahami kondisi dan menentukan tindakan yang sesuai.</p>
+                <div class="js-perbandingan-content"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- /SECTION: Perbandingan Status Pertumbuhan & Prediksi Risiko -->
+      </div>
+    </template>
+
+    <!-- SECTION: Footer -->
+    <footer id="footer" class="footer light-background py-5">
+      <div class="container">
+        <div class="row gy-4 justify-content-between align-items-start">
+
+          <div class="col-lg-6 col-md-7">
+            <a href="/" class="logo d-flex align-items-center mb-3">
+              <img src="assets/img/LOGO.png" alt="StunTrack" class="u-h-50px_mr-10px">
+            </a>
+            <p class="text-muted mb-0">
+              StunTrack merupakan platform digital yang dirancang untuk membantu orang tua
+              memantau tumbuh kembang balita secara mandiri. Dengan memanfaatkan teknologi, StunTrack
+              mendukung deteksi dini risiko stunting serta membantu orang tua memperoleh informasi yang
+              lebih mudah dipahami.
+            </p>
+          </div>
+
+          <div class="col-lg-4 col-md-5">
+            <h5 class="fw-semibold mb-3">Hubungi Kami</h5>
+            <p class="text-muted mb-1">Fakultas STEM Universitas Brawijaya</p>
+            <p class="text-muted mb-1">Jl. Veteran, Malang 65145</p>
+            <p class="text-muted mb-1">
+              <strong>Phone:</strong>
+              <span>+62 813-2970-7103 / +62 813-2510-8545</span>
+            </p>
+            <p class="text-muted mb-0">
+              <strong>Email:</strong>
+              <span>stuntingtracking@gmail.com</span>
+            </p>
+          </div>
+        </div>
+        <hr class="my-4">
+
+        <div class="text-center small text-muted">
+          © 2026 <strong class="sitename">StunTrack</strong> — All Rights Reserved
+        </div>
+      </div>
+    </footer>
+    <!-- /SECTION: Footer -->
+
+    <!-- SECTION: Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+    <!-- /SECTION: Scroll Top -->
+    <!-- SECTION: Scripts -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/pages/analysis.js"></script>
+    <!-- /SECTION: Scripts -->
+</body>
+
+</html>
